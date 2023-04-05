@@ -1,0 +1,113 @@
+/*顶部开始*/
+.header>.header-top,.header>.header-bottom{
+    display: none;
+}
+.header>.header-nav{
+    width: 100%;
+    height: 100px;
+    line-height: 100px;
+    padding-left: 20px;
+    padding-right: 20px;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-between;
+}
+.header>.header-nav a{
+    color: #fff;
+    text-decoration: none;
+    font-size: 40px;
+}
+.header>.header-nav>h1 a{
+    font-size: 100px;
+}
+/*顶部结束*/
+/*中间开始*/
+.main{
+    margin-top: 0;
+}
+.main>.main-top>ul .main-top-nav1{
+    display: none;
+}
+.main>.main-top>ul .main-top-nav2{
+    display: block;
+}
+.main>.main-top>div{
+    display: none;
+}
+.main>.main-bottom>div{
+    width: 100%;
+}
+.main>.main-bottom>div img{
+    width: 100%;
+    height: 100%;
+}
+/*中间结束*/
+/*底部开始*/
+.footer>.footer-in{
+    padding: 0 60px;
+    box-sizing: border-box;
+}
+.footer>.footer-in>.footer-top>.footer-top-left>dl{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+.footer-top-left>dl>dt{
+    font-size: 25px;
+    line-height: 50px;
+    color: #666;
+    box-sizing: border-box;
+    font-weight: normal;
+}
+.footer-top-left>dl>dt:nth-child(2)>img{
+    display: block;
+    width: 20px;
+    height: 20px;
+}
+.footer-top-left>dl>dd{
+    display: none;
+}
+.footer>.footer-in>.footer-top>.footer-top-left{
+    flex-wrap: wrap;
+    float: none;
+    width: 100%;
+}
+.footer>.footer-in>.footer-top>.footer-top-right{
+    float: none;
+    width: 100%;
+}
+.footer-top-right>p>a{
+    color: #415fff;
+    font-size: 30px;
+}
+.footer-top-right>p:nth-child(1){
+    float: left;
+}
+.footer-top-right>p:nth-child(2){
+    text-align: right;
+}
+.footer-top-right>p:nth-child(3){
+    text-align: right;
+    font-size: 18px;
+}
+.footer-bottom-left{
+    float: none;
+    font-size: 18px;
+}
+.footer-bottom-left a{
+    font-size: 18px;
+}
+.footer>.footer-in>.footer-top>.footer-top-right{
+    width: 100%;
+    margin-top: 60px;
+    float: none;
+}
+.footer-bottom-right{
+    float: none;
+    padding: 10px 0;
+    box-sizing: border-box;
+}
+.footer-bottom-right a{
+    font-size: 23px;
+}
+/*底部开始*/

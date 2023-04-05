@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>小渔吃豆</title>
+    <link rel="stylesheet" href="css/index.css">
+    <script src="js/SnakeMap.js"></script>
+    <script src="js/SnakeFood.js"></script>
+    <script src="js/Snake.js"></script>
+</head>
+<body>
+<script>
+    let snakeMap = new SnakeMap();
+    let snakeFood = new SnakeFood(100, 100, "images/body.png", snakeMap.map);
+    snakeFood.reader();
+    let obj = {
+        width : 100,
+        height : 100,
+        headImg : "images/head.png",
+        bodyImg : "images/body.png",
+        map : snakeMap.map
+    }
+    let snake = new Snake(obj);
+    snake.reader();
+    snake.update(snakeFood);
+</script>
+</body>
+</html>

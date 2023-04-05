@@ -1,0 +1,277 @@
+/*顶部开始*/
+.header{
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 99;
+}
+.header>.header-top{
+    width: 100%;
+    height: 40px;
+    background-color: #333;
+    padding: 0 48px;
+    font-size: 0;
+    box-sizing: border-box;
+}
+.header>.header-top a{
+    line-height: 40px;
+    text-decoration: none;
+    color: #CCCCCC;
+    font-size: 14px;
+    font-weight: 400;
+}
+.header>.header-top a:hover{
+    color: #666;
+}
+.header>.header-top>.fl>a{
+    margin-right: 42px;
+}
+.header>.header-top>.fr>a:nth-child(2){
+    margin-left: 42px;
+}
+.header>.header-top>.fr>span{
+    font-size: 14px;
+    color: #CCCCCC;
+    margin: 0 18px;
+}
+.header>.header-bottom{
+    width: 1200px;
+    height: 60px;
+    line-height: 60px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+}
+.header>.header-bottom a{
+    text-decoration: none;
+    color: #000;
+}
+.header>.header-bottom>h1>a{
+    font-size: 100px;
+}
+.header>.header-bottom>h1:hover a{
+    color: #415fff;
+}
+.header>.header-bottom>ul{
+    list-style: none;
+    margin: 0;
+}
+.header>.header-bottom>ul>li{
+    float: left;
+    font-size: 16px;
+    margin: 0 28px;
+}
+.header>.header-bottom>ul>li:hover a{
+    color: #415fff;
+}
+.header>.header-bottom>a{
+    font-size: 30px;
+    color: #666;
+}
+/*顶部结束*/
+/*中间开始*/
+.main{
+    width: 100%;
+    margin-top: 40px;
+}
+.main>.main-top{
+    position: relative;
+}
+.main>.main-top>ul a>img{
+    vertical-align: bottom;
+    width: 100%;
+}
+.main>.main-top>div>a:nth-child(1)>i{
+    background: url("../images/vivo-banner-title1.png") no-repeat;
+}
+.main>.main-top>div>a:nth-child(2)>i{
+    background: url("../images/vivo-banner-title2.png") no-repeat;
+}
+.main>.main-top>div>a:nth-child(3)>i{
+    background: url("../images/vivo-banner-title3.png") no-repeat;
+}
+.main>.main-top ol{
+    position: absolute;
+    bottom: 40px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.main>.main-top ol>li{
+    float: left;
+    width: 40px;
+    height: 5px;
+    margin-left: 4px;
+    margin-right: 4px;
+    background-color: rgba(255,255,255,0.5);
+}
+.main>.main-top>div{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 20%;
+}
+.main>.main-top>div>a>i{
+    display: block;
+    width: 304px;
+    height: 45px;
+}
+.main>.main-top>div>a:last-child{
+    display: block;
+    text-decoration: none;
+    color: rgba(255,255,255,0.5);
+    transition: all 0.5s;
+}
+.main>.main-top>div>a:last-child:hover{
+    color: #fff;
+}
+.main>.main-top>div>a:last-child:hover b{
+    background-color: #fff;
+    width: 60px;
+}
+.main>.main-top>div>a>p{
+    margin-top: 60px;
+    text-align: center;
+}
+.main>.main-top>div>a span{
+    display: block;
+}
+.main>.main-top>div>a b{
+    display: inline-block;
+    width: 16px;
+    height: 2px;
+    transition: all 0.5s;
+    margin-bottom: 8px;
+    background-color: rgba(255,255,255,0.5);
+}
+.main>.main-bottom{
+    width: 100%;
+    display: flex;
+    margin-top: 5px;
+}
+.main>.main-bottom>div{
+    flex: 1;
+    overflow: hidden;
+    position: relative;
+    height: 300px;
+}
+.main>.main-bottom>div img{
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.main>.main-bottom>div>a{
+    text-decoration: none;
+    text-align: center;
+    color: #000;
+}
+.main>.main-bottom>div:nth-child(2)>a{
+    color: #fff;
+}
+.main>.main-bottom>div:nth-child(4)>a{
+    color: #fff;
+ }
+.main>.main-bottom>div>a>div{
+    width: 100%;
+    position: absolute;
+    top: 25px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 99;
+}
+.main>.main-bottom>div>a h2{
+    display: block;
+    height: 21px;
+    line-height: 21px;
+    font-size: 16px;
+    font-weight: 500;
+}
+.main>.main-bottom>div>a p{
+    font-size: 14px;
+    margin-top: 10px;
+}
+/*中间结束*/
+/*底部开始*/
+.footer{
+    width: 100%;
+    background-color: #f7f7f7;
+    padding-top: 60px;
+}
+.footer>.footer-in{
+    width: 1200px;
+    margin: 0 auto;
+}
+.footer>.footer-in>.footer-top{
+    width: 100%;
+    padding-bottom: 76px;
+    border-bottom: 1px solid #333;
+}
+.footer>.footer-in>.footer-top>.footer-top-left{
+    display: flex;
+    width: 75%;
+    justify-content: space-between;
+}
+.footer>.footer-in>.footer-top>.footer-top-right{
+    width: 25%;
+}
+.footer-top-left>dl>dt{
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 17px;
+    margin-bottom: 40px;
+}
+.footer-top-left>dl>dd{
+    color: #666;
+    font-size: 14px;
+    line-height: 17px;
+    margin-bottom: 18px;
+}
+.footer-top-right>p{
+    text-align: center;
+}
+.footer-top-right>p>a{
+    text-decoration: none;
+    font-size: 22px;
+    color: #333;
+}
+.footer-top-right>p:nth-child(2){
+    color: #415fff;
+    font-size: 24px;
+    margin-top: 60px;
+}
+.footer-top-right>p:nth-child(3){
+    font-size: 14px;
+}
+.footer-bottom{
+    padding: 10px 0;
+}
+.footer-bottom a{
+     text-decoration: none;
+     font-size: 12px;
+     color: #666;
+ }
+.footer-bottom-left{
+    font-size: 12px;
+    color: #666;
+}
+.footer-bottom-right a{
+    vertical-align: top;
+}
+.footer-bottom-right>a:last-child{
+    margin-left: 59px;
+}
+/*底部结束*/
+/*响应式网页兼容开始*/
+.header-bottom .nav2{
+    display: none;
+}
+.main>.main-top>ul .main-top-nav2{
+    display: none;
+}
+.header>.header-nav{
+    display: none;
+}
+.footer-top-left>dl>dt:nth-child(2)>img{
+    display: none;
+}
+/*响应式网页兼容结束*/

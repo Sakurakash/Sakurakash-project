@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>小渔打字</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        html, body{
+            width: 100%;
+            height: 100%;
+        }
+        body{
+            background: url(images/bg.jpg) no-repeat;
+            background-size: cover;
+            overflow: hidden;
+        }
+        body>img{
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+        }
+        body>.specter{
+            width: 300px;
+            height: 300px;
+            background: url("images/yy.png") center center no-repeat;
+            position: absolute;
+        }
+        body>.specter>span{
+            position: absolute;
+            left: 70px;
+            top: 200px;
+            font-size: 60px;
+            font-weight: bold;
+            text-shadow: 5px 5px 5px #3e437a;
+        }
+    </style>
+</head>
+<body>
+<img src="images/play.png">
+<audio src="media/bg.ogg"></audio>
+<script>
+    let oImg = document.querySelector("img");
+    let oAudio = document.querySelector("audio");
+    let list = [];
+    oImg.onclick = function () {
+        // 1.移出开始游戏按钮
+        oImg.parentNode.removeChild(oImg);
+        oAudio.play();
+        // 2.创建幽灵
+        setInterval(function () {
+            let s = new Specter();
+            s.fly();
+            list.push(s);
+        }, 800);
+    }
+    class Specter{
+        constructor() {
+            // 1.创建div并设置样式
+            let oDiv = document.createElement("div");
+            oDiv.style.top = "1080px";
+            oDiv.style.left = Math.random()*1500 + "px";
+            // 2.创建span并设置内容
+            let oSpan = document.createElement("span");
+            let key = this.char();
+            oDiv.className = "specter " + key;
+            oSpan.innerText = key;
+            // 3.将span添加到div中
+            oDiv.appendChild(oSpan);
+            //4.把div添加到body
+            document.body.appendChild(oDiv);
+            this.tool = oDiv;
+            }
+        boom() {
+            // 1.删除当前的幽灵
+            document.body.removeChild(this.tool);
+            // 2.删除当前幽灵对应的定时器
+            clearInterval(this.timer);
+        }
+        fly() {
+            let i = parseInt(this.tool.style.top);
+            this.timer = setInterval( () => {
+                i -= 2;
+                if (i < -300){
+                    this.boom();
+                }
+                this.tool.style.top = i + "px";
+            }, 1);
+        }
+        char() {
+            let num = Math.floor(Math.random() * (90 - 65 + 1)) + 65;
+            return String.fromCharCode(num);
+        }
+    }
+    document.body.onkeydown = function () {
+        let key = event.key.toUpperCase();
+        if (key === " "){
+            return;
+        }
+        let oDiv = document.querySelector("." + key);
+        let currentIndex = list.findIndex(function (currentValue) {
+            return currentValue.tool === oDiv;
+        });
+        if (currentIndex === -1){
+            return;
+        }
+        list[currentIndex].boom();
+        list.splice(currentIndex, 1);
+    }
+</script>
+</body>
+</html>

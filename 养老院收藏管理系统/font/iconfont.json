@@ -1,0 +1,30 @@
+{
+  "id": "",
+  "name": "",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "821797",
+      "name": "通用-展开",
+      "font_class": "zhankai",
+      "unicode": "e62c",
+      "unicode_decimal": 58924
+    },
+    {
+      "icon_id": "827370",
+      "name": "通用-收起",
+      "font_class": "shouqi",
+      "unicode": "e63e",
+      "unicode_decimal": 58942
+    },
+    {
+      "icon_id": "1727558",
+      "name": "321 回顶部",
+      "font_class": "huidingbu",
+      "unicode": "e8f7",
+      "unicode_decimal": 59639
+    }
+  ]
+}

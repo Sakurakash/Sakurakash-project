@@ -1,0 +1,187 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+html{
+    background-color: #eee;
+}
+body{
+    min-width: 320px;
+    max-width: 750px;
+    margin: 0 auto;
+    background-color: white;
+}
+/*头部开始*/
+.header>img{
+    width: 100%;
+    vertical-align: bottom;
+}
+/*头部结束*/
+/*中间开始*/
+.main{
+    color: white;
+}
+.main>.section{
+    display: flex;
+    height: 100px;
+    margin: 4px 2px;
+}
+.main>.section:nth-child(1){
+    background-color: #ff5555;
+}
+.main>.section:nth-child(2){
+    background-color: #00a7f7;
+}
+.main>.section:nth-child(3){
+    background-color: #7cb832;
+}
+.main>.section:nth-child(4){
+    background-color: #ff9900;
+}
+.main>.section>.col{
+    flex: 1;
+    border-left: 1px solid #ffffff;
+    text-align: center;
+    box-sizing: border-box;
+}
+.main>.section>.col>p{
+    margin: 15px;
+}
+.main>.section>.col>img{
+    width: 42px;
+    height: 46px;
+}
+.main>.section>.col:nth-child(1){
+    border-left: none;
+}
+.main>.section>.col:nth-child(2)>div{
+    height: 49.5px;
+    line-height: 49.5px;
+    border-bottom: 1px solid #fff;
+}
+.main>.section>.col:nth-child(2)>div:nth-child(2){
+    border-bottom: none;
+}
+.main>.section>.col:nth-child(3)>div{
+    height: 49.5px;
+    line-height: 49.5px;
+    border-bottom: 1px solid #fff;
+}
+.main>.section>.col:nth-child(3)>div:nth-child(2){
+    border-bottom: none;
+}
+.main>.section:nth-child(4){
+    height: 50px;
+}
+.main>.section:nth-child(4)>.col>p{
+    margin: 0;
+    line-height: 50px;
+}
+/*中间结束*/
+/*底部开始*/
+.nav{
+    background-color: #ccc;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+.nav>ul{
+    display: flex;
+    list-style: none;
+    background-color: #fff;
+}
+.nav>ul>li{
+    height: 70px;
+    flex: 1;
+    text-align: center;
+}
+.nav>ul>li>i{
+    display: inline-block;
+    margin-top: 12px;
+    height: 33px;
+    width: 33px;
+    background: url("../images/icons.png") no-repeat;
+}
+.nav>ul>li:nth-child(1)>i{
+    background-position:  -35px -12px;
+}
+.nav>ul>li:nth-child(2)>i{
+    background-position: -124px -12px;
+}
+.nav>ul>li:nth-child(3)>i{
+    background-position: -212px -12px;
+}
+.nav>ul>li:nth-child(4)>i{
+    background-position: -300px -79px;
+}
+.nav>ul:nth-child(2)>li:nth-child(1)>i{
+    background-position: -35px -79px;
+}
+.nav>ul:nth-child(2)>li:nth-child(2)>i{
+    background: url("../images/youlun.png") no-repeat;
+    background-position: 3px 6px;
+}
+.nav>ul:nth-child(2)>li:nth-child(3)>i{
+    background-position: -212px -79px;
+}
+.nav>ul:nth-child(2)>li:nth-child(4)>i{
+    background-position: -300px -12px;
+}
+.nav>ul>li>p{
+    color: #666;
+    font-size: 12px;
+}
+/*底部结束*/
+/*指引开始*/
+.guide{
+    display: flex;
+    height: 80px;
+}
+.guide>div{
+    flex: 1;
+    text-align: center;
+    color: #666;
+    font-size: 12px;
+}
+.guide>div>i{
+    margin-top: 10px;
+    height: 40px;
+    width: 40px;
+    display: inline-block;
+    border: 1px solid #666;
+    border-radius: 50%;
+}
+.icon{
+    font-size: 38px;
+    color: black;
+}
+.dingdan{
+    font-size: 28px;
+    margin-top: 5px;
+}
+.wode{
+    font-size: 30px;
+    margin-top: 5px;
+}
+/*指引结束*/
+.footer{
+    font-size: 16px;
+    background-color: #ccc;
+    height: 50px;
+    line-height: 50px;
+}
+.footer>p{
+    display: inline-block;
+    margin-right: 5px;
+    color: #666;
+}
+.footer>a{
+    text-decoration: none;
+    color: #333;
+}
+.icon {
+    width: 1em;
+    height: 1em;
+    vertical-align: -0.15em;
+    fill: currentColor;
+    overflow: hidden;
+}

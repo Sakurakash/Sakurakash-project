@@ -1,0 +1,22 @@
+.triangle(@_, @w, @c){
+  display: inline-block;
+  width: 0;
+  height: 0;
+  border-style: solid;
+}
+.triangle(Down, @w, @c){
+  border-width: @w;
+  border-color: @c transparent transparent transparent;
+}
+.triangle(Left, @w, @c){
+  border-width: @w;
+  border-color: transparent @c transparent transparent;
+}
+.triangle(Up, @w, @c){
+  border-width: @w;
+  border-color: transparent transparent @c transparent;
+}
+.triangle(Right, @w, @c){
+  border-width: @w;
+  border-color: transparent transparent transparent @c;
+}

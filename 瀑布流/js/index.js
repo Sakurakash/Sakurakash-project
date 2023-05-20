@@ -21,12 +21,13 @@ window.onload = function () {
             waterfall(oItems, colsNum);
         }, 50);
         //5.监听图片加载事件;
-        loadImages(oItems, oMain, oImages);
+        loadImages(oMain, oImages);
     });
 };
-function loadImages(oItems, oMain, oImages) {
+function loadImages(oMain, oImages) {
     let screenHeight = getScreen().height;
     window.onscroll = debounce(function () {
+        let oItems = document.querySelectorAll(".box");
         let item = oItems[oItems.length - 1];
         let target = item.offsetTop + item.offsetHeight/2;
         if (getPageScroll().y + screenHeight >= target){

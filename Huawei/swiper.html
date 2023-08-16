@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>华为响应式官网轮播图</title>
+	<link rel="stylesheet" href="css/swiper-bundle.css">
+	<link rel="stylesheet" href="css/animate.min.css">
+	<link rel="stylesheet" href="css/swiper.css">
+	<script src="js/swiper-bundle.js"></script>
+	<script src="js/swiper.animate1.0.3.min.js"></script>
+</head>
+<body>
+<div class="section-bottom">
+	<div class="swiper">
+		<div class="swiper-wrapper">
+			<div class="swiper-slide">
+				<img src="images/orange_left.png" class="ani" swiper-animate-effect="myFadeInUp">
+				<img src="images/orange_right.png" class="ani" swiper-animate-effect="myFadeInUp" swiper-animate-delay="0.1s">
+			</div>
+			<div class="swiper-slide">
+				<img src="images/green_left.png" class="ani" swiper-animate-effect="myFadeInDown">
+				<img src="images/green_right.png" class="ani" swiper-animate-effect="myFadeInUp">
+			</div>
+			<div class="swiper-slide">
+				<img src="images/purple_left.png" class="ani" swiper-animate-effect="myFadeInUp">
+				<img src="images/purple_right.png" class="ani" swiper-animate-effect="myFadeInUp" swiper-animate-delay="0.1s">
+			</div>
+			<div class="swiper-slide">
+				<img src="images/black_left.png" class="ani" swiper-animate-effect="myFadeInUp">
+				<img src="images/black_right.png" class="ani" swiper-animate-effect="myFadeInUp" swiper-animate-delay="0.1s">
+			</div>
+		</div>
+		<div class="swiper-pagination"></div>
+		<p class="swiper-line"></p>
+		<p class="swiper-name">
+			<span>珊瑚橙<br>绮境森林<br>仲夏紫<br>亮黑色</span>
+		</p>
+		<p class="swiper-num">
+			<span>01<br>02<br>03<br>04</span>
+		</p>
+	</div>
+</div>
+
+<script>
+	const swiper = new Swiper(".swiper", {
+		autoplay: {
+			delay: 3000,//1秒切换一次
+		},
+
+		pagination: {
+			el: '.swiper-pagination',
+			bulletClass : 'my-bullet',
+			bulletActiveClass: 'my-bullet-active'
+		},
+		on:{
+			init: function(){
+				swiperAnimateCache(this); //隐藏动画元素
+				swiperAnimate(this); //初始化完成开始动画
+			},
+			slideChangeTransitionEnd: function(){
+				swiperAnimate(this); //每个slide切换结束时也运行当前slide动画
+				let oName = document.querySelector(".swiper-name>span");
+				let oNum = document.querySelector(".swiper-num>span");
+				let offsetY = this.activeIndex * -45 + "px";
+				let ani = [{ top: offsetY }];
+				let options = {duration: 300, fill: "forwards"};
+				oName.animate(ani, options);
+				oNum.animate(ani, options);
+			}
+		}
+	});
+</script>
+</body>
+</html>

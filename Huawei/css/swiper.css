@@ -1,0 +1,168 @@
+.section-bottom {
+  width: 70%;
+  margin: 0 auto;
+  padding: 100px 0;
+}
+.section-bottom .swiper {
+  width: 100%;
+  height: 34vw;
+  border-radius: 35px;
+  overflow: hidden;
+}
+.section-bottom .swiper .swiper-slide {
+  position: relative;
+}
+.section-bottom .swiper .swiper-slide img {
+  position: absolute;
+}
+.section-bottom .swiper .swiper-slide:nth-child(1) {
+  background: #ffdbc6;
+}
+.section-bottom .swiper .swiper-slide:nth-child(1) img:nth-child(1) {
+  width: 36%;
+  left: 15%;
+  bottom: -40%;
+  z-index: 1;
+}
+.section-bottom .swiper .swiper-slide:nth-child(1) img:nth-child(2) {
+  width: 36%;
+  left: 30%;
+  bottom: -60%;
+}
+.section-bottom .swiper .swiper-slide:nth-child(2) {
+  background: #ace3e5;
+}
+.section-bottom .swiper .swiper-slide:nth-child(2) img:nth-child(1) {
+  width: 48%;
+  left: 40%;
+  bottom: 40%;
+}
+.section-bottom .swiper .swiper-slide:nth-child(2) img:nth-child(2) {
+  width: 48%;
+  left: 25%;
+  top: 40%;
+}
+.section-bottom .swiper .swiper-slide:nth-child(3) {
+  background: #e0daf5;
+}
+.section-bottom .swiper .swiper-slide:nth-child(3) img:nth-child(1) {
+  width: 34%;
+  left: 30%;
+  bottom: -40%;
+  z-index: -1;
+}
+.section-bottom .swiper .swiper-slide:nth-child(3) img:nth-child(2) {
+  width: 38%;
+  left: 41%;
+  bottom: -30%;
+}
+.section-bottom .swiper .swiper-slide:nth-child(4) {
+  background: #dbdbdb;
+}
+.section-bottom .swiper .swiper-slide:nth-child(4) img:nth-child(1) {
+  width: 25%;
+  left: 27%;
+  bottom: -30%;
+  z-index: -1;
+}
+.section-bottom .swiper .swiper-slide:nth-child(4) img:nth-child(2) {
+  width: 25%;
+  left: 45%;
+  bottom: -30%;
+}
+.section-bottom .swiper .swiper-pagination {
+  position: absolute;
+  left: auto;
+  width: auto;
+  bottom: 10%;
+  right: 10%;
+}
+.section-bottom .swiper .swiper-pagination .my-bullet {
+  display: inline-block;
+  width: 1.3vw;
+  height: 1.3vw;
+  border-radius: 50%;
+  background: #000;
+  margin: 0 5px;
+}
+.section-bottom .swiper .swiper-pagination .my-bullet:nth-child(1) {
+  color: #ff6b29;
+  background: #ff6b29;
+}
+.section-bottom .swiper .swiper-pagination .my-bullet:nth-child(2) {
+  color: #16c196;
+  background: #16c196;
+}
+.section-bottom .swiper .swiper-pagination .my-bullet:nth-child(3) {
+  color: #9676ff;
+  background: #9676ff;
+}
+.section-bottom .swiper .swiper-pagination .my-bullet:nth-child(4) {
+  color: #434040;
+  background: #434040;
+}
+.section-bottom .swiper .swiper-pagination .my-bullet-active {
+  border: 3px solid #fff;
+  box-sizing: border-box;
+  box-shadow: 0 0 10px;
+}
+.section-bottom .swiper .swiper-line {
+  width: 4vw;
+  height: 3px;
+  background: #fff;
+  position: absolute;
+  left: 5%;
+  top: 10%;
+  z-index: 666;
+}
+.section-bottom .swiper .swiper-name, .section-bottom .swiper .swiper-num {
+  font-size: 40px;
+  height: 45px;
+  line-height: 45px;
+  overflow: hidden;
+  color: #fff;
+  position: absolute;
+  left: 5%;
+  top: 15%;
+  z-index: 666;
+}
+.section-bottom .swiper .swiper-name span, .section-bottom .swiper .swiper-num span {
+  display: block;
+  position: relative;
+  top: 0;
+}
+.section-bottom .swiper .swiper-num {
+  left: auto;
+  top: 5%;
+  right: 5%;
+}
+
+@keyframes myFadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20%);
+  }
+  100% {
+    opacity: 1;
+    transform: none;
+  }
+}
+.myFadeInUp {
+  animation-name: myFadeInUp;
+}
+
+@keyframes myFadeInDown {
+  0% {
+    opacity: 0;
+    transform: translateY(-20%);
+  }
+  100% {
+    opacity: 1;
+    transform: none;
+  }
+}
+.myFadeInDown {
+  animation-name: myFadeInDown;
+}
+
+/*# sourceMappingURL=swiper.css.map */

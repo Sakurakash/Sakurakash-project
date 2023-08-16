@@ -1,0 +1,167 @@
+.section-bottom{
+  width: 70%;
+  margin: 0 auto;
+  padding: 100px 0;
+  .swiper{
+    width: 100%;
+    // 注意点: 百分比单位是相对于当前元素的父元素的, 如果父元素没有高度, 那么设置100%也是没有高度
+    // vw是视口单位
+    // 注意点: vw单位是永远相对于视口宽度
+    height: 34vw;// 34%视口宽度
+    border-radius: 35px;
+    overflow: hidden;
+    .swiper-slide{
+      position: relative;
+      img{
+        position: absolute;
+      }
+      &:nth-child(1){
+        background: #ffdbc6;
+        img:nth-child(1){
+          width: 36%;
+          left: 15%;
+          bottom: -40%;
+          z-index: 1;
+        }
+        img:nth-child(2){
+          width: 36%;
+          left: 30%;
+          bottom: -60%;
+        }
+      }
+      &:nth-child(2){
+        background: #ace3e5;
+        img:nth-child(1){
+          width: 48%;
+          left: 40%;
+          bottom: 40%;
+        }
+        img:nth-child(2){
+          width: 48%;
+          left: 25%;
+          top: 40%;
+        }
+      }
+      &:nth-child(3){
+        background: #e0daf5;
+        img:nth-child(1){
+          width: 34%;
+          left: 30%;
+          bottom: -40%;
+          z-index: -1;
+        }
+        img:nth-child(2){
+          width: 38%;
+          left: 41%;
+          bottom: -30%;
+        }
+      }
+      &:nth-child(4){
+        background: #dbdbdb;
+        img:nth-child(1){
+          width: 25%;
+          left: 27%;
+          bottom: -30%;
+          z-index: -1;
+        }
+        img:nth-child(2){
+          width: 25%;
+          left: 45%;
+          bottom: -30%;
+        }
+      }
+    }
+    .swiper-pagination{
+      position: absolute;
+      left: auto;
+      width: auto;
+      bottom: 10%;
+      right: 10%;
+      .my-bullet{
+        display: inline-block;
+        width: 1.3vw;
+        height: 1.3vw;
+        border-radius: 50%;
+        background: #000;
+        margin: 0 5px;
+        &:nth-child(1){
+          color: #ff6b29;
+          background: #ff6b29;
+        }
+        &:nth-child(2){
+          color: #16c196;
+          background: #16c196;
+        }
+        &:nth-child(3){
+          color: #9676ff;
+          background: #9676ff;
+        }
+        &:nth-child(4){
+          color: #434040;
+          background: #434040;
+        }
+      }
+      .my-bullet-active{
+        border: 3px solid #fff;
+        box-sizing: border-box;
+        box-shadow: 0 0 10px;
+      }
+    }
+    .swiper-line{
+      width: 4vw;
+      height: 3px;
+      background: #fff;
+      position: absolute;
+      left: 5%;
+      top: 10%;
+      z-index: 666;
+    }
+    .swiper-name, .swiper-num{
+      font-size: 40px;
+      height: 45px;
+      line-height: 45px;
+      overflow: hidden;
+      color: #fff;
+      position: absolute;
+      left: 5%;
+      top: 15%;
+      z-index: 666;
+      span{
+        display: block;
+        position: relative;
+        top: 0;
+      }
+    }
+    .swiper-num{
+      left: auto;
+      top: 5%;
+      right: 5%;
+    }
+  }
+}
+@keyframes myFadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20%)
+  }
+  100% {
+    opacity: 1;
+    transform: none;
+  }
+}
+.myFadeInUp {
+  animation-name: myFadeInUp
+}
+@keyframes myFadeInDown {
+  0% {
+    opacity: 0;
+    transform: translateY(-20%)
+  }
+  100% {
+    opacity: 1;
+    transform: none;
+  }
+}
+.myFadeInDown {
+  animation-name: myFadeInDown;
+}

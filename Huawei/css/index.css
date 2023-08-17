@@ -372,6 +372,11 @@ a {
   margin-left: 200px;
   padding-top: 50px;
 }
+@media screen and (max-width: 800px){
+  .section2 .section-top > div:nth-of-type(2){
+    margin: 0;
+  }
+}
 .section2 .section-middle {
   position: relative;
 }

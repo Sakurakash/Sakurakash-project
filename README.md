@@ -66,6 +66,11 @@
 	<li>项目描述：一个经典的贪吃蛇游戏的前端界面实现。</li>
 </ul>
 </li>
+	<li><p><strong> <a href="./Huawei/index.html" target="_new">华为</a></strong></p>
+<ul>
+	<li>项目描述：一个经典的贪吃蛇游戏的前端界面实现。</li>
+</ul>
+</li>
 </ol>
 <h2>许可证</h2>
 <p>这个仓库中的项目使用 <a href="LICENSE" target="_new">MIT许可证</a> 进行许可。</p>

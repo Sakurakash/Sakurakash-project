@@ -1,0 +1,412 @@
+@import "../../css/common";
+.header{
+  width: 100%;
+  height: 0.88rem;
+  line-height: 0.88rem;
+  padding: 0 0.30rem;
+  box-sizing: border-box;
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 999;
+  .header-in{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    img{
+      width: 0.56rem;
+      height: 0.56rem;
+      vertical-align: top;
+      position: relative;
+      top: 0.16rem;
+    }
+    div{
+      color: #fff;
+      text-align: center;
+      .header-title{
+        font-size: 0.30rem;
+        font-weight: bold;
+        line-height: 0.58rem;
+      }
+      .header-singer{
+        font-size: 0.22rem;
+        line-height: 0.30rem;
+      }
+    }
+  }
+}
+.footer{
+  width: 100%;
+  padding: 0 0.30rem;
+  box-sizing: border-box;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  z-index: 999;
+  .footer-in{
+    width: 100%;
+    .footer-top{
+      width: 100%;
+      height: 0.88rem;
+      line-height: 0.88rem;
+      display: flex;
+      justify-content: space-between;
+      span{
+        font-size: 0.18rem;
+        color: #fff;
+      }
+      .progress-bar{
+        flex: 1;
+        margin: 0 0.20rem;
+        height: 0.10rem;
+        background: rgba(255,255,255,0.5);
+        position: relative;
+        top: 0.39rem;
+        .progress-line{
+          width: 0;
+          height: 100%;
+          background: #fff;
+          position: relative;
+          .progress-dot{
+            width: 0.20rem;
+            height: 0.20rem;
+            background: #fff;
+            border-radius: 50%;
+            @include vCenter;
+            margin-left: 100%;
+          }
+        }
+      }
+    }
+    .footer-bottom{
+      width: 100%;
+      height: 1.2rem;
+      display: flex;
+      justify-content: space-between;
+      li{
+        img{
+          width: 0.56rem;
+          height: 0.56rem;
+          padding-top: 0.32rem;
+        }
+        &.play{
+          position: relative;
+          &.active{
+            img{
+              &:nth-of-type(1){
+                display: none;
+              }
+              &:nth-of-type(2){
+                display: inline-block;
+              }
+            }
+          }
+          img{
+            width: 1rem;
+            height: 1rem;
+            padding-top: 0.10rem;
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            top: 0;
+          }
+          img:nth-of-type(2){
+            display: none;
+          }
+        }
+      }
+    }
+  }
+}
+.main{
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background: rgba(0,0,0,0.5);
+  .bg{
+    width: 100%;
+    height: 100%;
+    background: url("./../images/test.jpg") no-repeat center top;
+    background-size: auto 100%;
+    position: fixed;
+    left: 0;
+    top: 0;
+    filter: blur(50px);
+  }
+  .main-in{
+    width: 100%;
+    height: 100%;
+    padding-top: 0.88rem;
+    padding-bottom: 2.08rem;
+    box-sizing: border-box;
+    position: relative;
+    left: 0;
+    top: 0;
+    z-index: 666;
+    background: rgba(0, 0, 0, 0.5);
+    &.active{
+      .main-default{
+        top: 200%;
+      }
+      .main-lyric{
+        top: -100%;
+      }
+    }
+    .main-default{
+      width: 100%;
+      height: 100%;
+      position: relative;
+      left: 0;
+      top: 0;
+      .default-top{
+        position: relative;
+        z-index: 999;
+        img{
+          width: 2.5rem;
+          position: absolute;
+          left: 50%;
+          margin-left: -0.60rem;
+          transform-origin: 0.62rem 0.62rem;
+          transform: rotate(-30deg);
+          transition: transform 0.5s linear;
+        }
+      }
+      .default-middle{
+        margin-top: -1.5rem;
+        width: 100%;
+        height: 5rem;
+        @include vCenter;
+        .bg-disc{
+          width: 5rem;
+          height: 5rem;
+          background: rgba(255,255,255,0.5);
+          border-radius: 50%;
+          @include hCenter;
+          div{
+            width: 4.5rem;
+            height: 4.5rem;
+            background: rgba(0,0,0,0.5);
+            border-radius: 50%;
+            @include center;
+          }
+        }
+        .swiper-container{
+          width: 100%;
+          height: 100%;
+          .swiper-slide{
+            .disc-pic{
+              width: 5rem;
+              height: 5rem;
+              background: url("./../images/player-it666-disc.png") no-repeat;
+              background-size: 100% auto;
+              @include center;
+              animation: sport 10s linear 0s infinite normal;
+              animation-play-state: paused;
+              img{
+                width: 3.2rem;
+                height: 3.2rem;
+                border-radius: 50%;
+                @include center;
+              }
+            }
+          }
+        }
+      }
+      .default-bottom{
+        width: 100%;
+        padding: 0 0.3rem;
+        box-sizing: border-box;
+        display: flex;
+        justify-content: space-between;
+        position: absolute;
+        left: 0;
+        bottom: 0.6rem;
+        li{
+          img{
+            width: 0.56rem;
+            height: 0.56rem;
+          }
+        }
+      }
+    }
+    .main-lyric{
+      width: 100%;
+      height: 100%;
+      position: relative;
+      left: 0;
+      top: 200%;
+      overflow: hidden;
+      .lyric-top{
+        display: flex;
+        justify-content: space-between;
+        padding: 0 0.3rem;
+        img{
+          width: 0.56rem;
+          height: 0.56rem;
+        }
+        .voice-progress-bar{
+          flex: 1;
+          margin-left: 0.20rem;
+          height: 0.1em;
+          background: rgba(255,255,255,0.5);
+          position: relative;
+          z-index: 999;
+          top: 0.23rem;
+          .voice-progress-line{
+            width: 50%;
+            height: 100%;
+            background: #fff;
+            position: relative;
+            .voice-progress-dot{
+              width: 0.2rem;
+              height: 0.2rem;
+              background: #fff;
+              border-radius: 50%;
+              @include vCenter;
+              margin-left: 100%;
+            }
+          }
+        }
+      }
+      .lyric-bottom{
+        width: 100%;
+        padding: 0 0.3rem;
+        box-sizing: border-box;
+        height: 50%;
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        .lyric-time-line{
+          width: 100%;
+          height: 0.8rem;
+          line-height: 0.8rem;
+          display: none;
+          justify-content: space-between;
+          position: absolute;
+          left: 0;
+          top: 0;
+          img{
+            width: 0.56rem;
+            height: 0.56rem;
+            position: relative;
+            top: 0.12rem;
+          }
+          div{
+            flex: 1;
+            margin: 0 0.2rem;
+            height: 0.05em;
+            background: rgba(255,255,255,0.5);
+            position: relative;
+            top: 0.32rem;
+          }
+          span{
+            font-size: 0.18rem;
+            color: #fff;
+          }
+        }
+        .lyric-list{
+          li{
+            font-size: 0.3rem;
+            color: #999;
+            width: 100%;
+            text-align: center;
+            height: 0.8rem;
+            line-height: 0.8rem;
+            &.active{
+              color: #fff !important;
+            }
+            &.hover{
+              color: #f00;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@keyframes sport {
+  from{
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+  to{
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+}
+
+.modal{
+  display: none;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 999;
+  background: rgba(0,0,0,0.5);
+  .modal-main{
+    width: 100%;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    padding: 0 0.30rem;
+    box-sizing: border-box;
+    background: #fff;
+    border-top-left-radius: 0.20rem;
+    border-top-right-radius: 0.20rem;
+    .modal-top{
+      width: 100%;
+      height: 0.88rem;
+      line-height: 0.88rem;
+      display: flex;
+      justify-content: space-between;
+      font-size: 0.28rem;
+      border-bottom: 1px solid #ccc;
+      img{
+        width: 0.56rem;
+        height: 0.56rem;
+        vertical-align: top;
+        position: relative;
+        top: 0.16rem;
+      }
+      &>p{
+        display: flex;
+        justify-content: space-between;
+      }
+      &>div{
+        display: flex;
+        justify-content: space-between;
+      }
+    }
+    .modal-bottom{
+      width: 100%;
+      height: 1.2rem;
+      line-height: 1.2rem;
+      text-align: center;
+      font-size: 0.28rem;
+    }
+    .modal-list{
+      width: 100%;
+      height: 4.4rem;
+      overflow: hidden;
+      .modal-middle{
+        li{
+          height: 0.88rem;
+          line-height: 0.88rem;
+          width: 100%;
+          display: flex;
+          justify-content: space-between;
+          font-size: 0.28rem;
+          border-bottom: 1px solid #ccc;
+          img{
+            width: 0.56rem;
+            height: 0.56rem;
+            vertical-align: top;
+            position: relative;
+            top: 0.16rem;
+          }
+        }
+      }
+    }
+  }
+}

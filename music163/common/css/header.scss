@@ -1,0 +1,362 @@
+@import "../../css/common";
+.header{
+  width: 100%;
+  height: (88rem/100);
+  padding: 0 (20rem/100);
+  box-sizing: border-box;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  background: #fcfcfd;
+  .header-default{
+    width: 100%;
+    height: 100%;
+    position: relative;
+    z-index: 999;
+    .header-center{
+      width: 100%;
+      height: 100%;
+      float: left;
+      .header-box{
+        height: (72rem/100);
+        margin: (8rem/100) (120rem/100) 0;
+        background: #f7f7f7;
+        border-radius: (36rem/100);
+        position: relative;
+        overflow: hidden;
+        img{
+          @include vCenter;
+          left: (56rem/100);
+        }
+        input{
+          width: 100%;
+          height: 100%;
+          border: none;
+          outline: none;
+          padding-left: (108rem/100);
+          box-sizing: border-box;
+          font-size: (30rem/100);
+          background: #f6f6f7;
+          color: #c9c9c9;
+        }
+        .header-title{
+          display: none;
+        }
+        .header-switch{
+          display: none;
+        }
+      }
+    }
+    .header-cancel{
+      display: none;
+    }
+    .header-left, .header-right{
+      width: (56rem/100);
+      height: (56rem/100);
+      margin-top: (16rem/100);
+      float: left;
+    }
+    .header-left{
+      margin-left: -100%;
+      background: url("../../common/images/topbar-it666-discern.png") no-repeat;
+      background-size: 100% auto;
+    }
+    .header-right{
+      margin-left: -(56rem/100);
+      background: url("../../common/images/topbar-it666-play.png") no-repeat;
+      background-size: 100% auto;
+    }
+  }
+  &.active{
+    .header-default{
+      .header-left{
+        display: none;
+      }
+      .header-right{
+        background: url("../../common/images/topbar-it666-category.png") no-repeat;
+        background-size: 100% auto;
+      }
+      .header-box{
+        margin: (8rem/100) (240rem/100) 0 0;
+        img{
+          left: (22rem/100);
+        }
+        input{
+          padding-left: (74rem/100);
+        }
+      }
+      .header-cancel{
+        display: inline-block;
+        float: left;
+        margin-left: -2rem;
+        line-height: (88rem/100);
+        font-size: (32rem/100);
+        a{
+          color: #333;
+          font-weight: bold;
+        }
+      }
+    }
+  }
+  &.video{
+    .header-default{
+      .header-left{
+        background: url("../../common/images/topbar-it666-video.png") no-repeat;
+        background-size: 100% auto;
+      }
+    }
+  }
+  &.me{
+    .header-default{
+      .header-left{
+        background: url("../../common/images/topbar-it666-cloud.png") no-repeat;
+        background-size: 100% auto;
+      }
+      .header-box{
+        background: transparent;
+        img{
+          display: none;
+        }
+        input{
+          display: none;
+        }
+        .header-title{
+          display: block;
+          line-height: (72rem/100);
+          text-align: center;
+          font-weight: bold;
+          font-size: (34rem/100);
+        }
+      }
+    }
+  }
+  &.friend{
+    .header-default{
+      .header-left{
+        background: url("../../common/images/topbar-it666-add.png") no-repeat;
+        background-size: 100% auto;
+      }
+      .header-center{
+        .header-box{
+          background: transparent;
+          img{
+            display: none;
+          }
+          input{
+            display: none;
+          }
+          .header-switch{
+            display: flex;
+            width: 2.8rem;
+            height: 0.58rem;
+            margin: 0 auto;
+            border: 1px solid #ffcbc8;
+            border-radius: 0.29rem;
+            position: relative;
+            i{
+              display: block;
+              width: 1.4rem;
+              height: 100%;
+              border-radius: 0.29rem;
+              background: #fd271b;
+              position: absolute;
+              left: 0;
+              top: 0;
+            }
+            span{
+              position: relative;
+              z-index: 1;
+              width: 1.4rem;
+              height: 100%;
+              text-align: center;
+              font-weight: bold;
+              line-height: 0.58rem;
+              font-size: 0.34rem;
+              color: #fd271b;
+              &.active{
+                color: #fff;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  &.account{
+    .header-default{
+      .header-left{
+        background: url("../../common/images/topbar-it666-scan.png") no-repeat;
+        background-size: 100% auto;
+      }
+      .header-box{
+        display: none;
+      }
+    }
+  }
+  .header-container{
+    display: none;
+    width: 100%;
+    height: 15rem;
+    background: #fff;
+    .header-wrapper {
+      .search-ad {
+        padding-top: 0.3rem;
+        position: relative;
+        img {
+          border-radius: 0.2rem;
+        }
+        span {
+          position: absolute;
+          top: 0.4rem;
+          right: 0.1rem;
+          font-size: 0.3rem;
+          color: #fff;
+        }
+      }
+      .search-history{
+        width: 100%;
+        height: 1.95rem;
+        padding: 0.36rem 0;
+        box-sizing: border-box;
+        overflow: hidden;
+        .history-top{
+          width: 100%;
+          display: flex;
+          justify-content: space-between;
+          h6{
+            font-size: 0.26rem;
+            font-weight: bold;
+            color: #333;
+          }
+          img{
+            width: 0.56rem;
+            height: 0.56rem;
+            position: relative;
+            top: -0.05rem;
+          }
+        }
+        .history-bottom{
+          width: 100%;
+          white-space: nowrap;
+          overflow-x: scroll;
+          /*
+          // 注意点: -webkit-scrollbar是webkit内核浏览器的私有属性
+          //         只有在谷歌浏览器和苹果的浏览器上有效
+          &::-webkit-scrollbar{
+            display: none;
+          }
+           */
+          // 奇淫技巧: 可以通过将滚动条挤出父元素的方式来隐藏滚动条
+          padding-bottom: 1rem;
+          li{
+            display: inline-block;
+            font-size: 0.26rem;
+            text-align: center;
+            color: #333;
+            padding: 0.14rem 0.30rem;
+            background: #f8f8f8;
+            border-radius: 0.33rem;
+            margin-right: 0.24rem;
+            &:last-child{
+              margin-right: 0;
+            }
+          }
+        }
+      }
+      .search-hot{
+        padding: 0.36rem 0;
+        .hot-top{
+          width: 100%;
+          display: flex;
+          justify-content: space-between;
+          h6{
+            font-size: 0.26rem;
+            font-weight: bold;
+            color: #333;
+          }
+        }
+        .hot-bottom{
+          list-style: none;
+          li{
+            width: 100%;
+            height: 1.34rem;
+            display: flex;
+            justify-content: flex-start;
+            &:nth-of-type(1), &:nth-of-type(2), &:nth-of-type(3){
+              .hot-left{
+                color: red;
+              }
+            }
+            .hot-left{
+              width: 0.54rem;
+              height: 100%;
+              line-height: 1.34rem;
+              font-size: 0.30rem;
+              color: #666;
+            }
+            .hot-right{
+              p:nth-of-type(1){
+                padding-top: 0.20rem;
+                strong{
+                  font-size: 0.32rem;
+                  font-weight: bold;
+                  color: #333;
+                }
+                span{
+                  font-size: 0.26rem;
+                  color: #ccc;
+                  margin: 0 0.20rem;
+                }
+                img{
+                  width: auto;
+                  height: 0.32rem;
+                  position: relative;
+                  top: -0.10rem;
+                }
+              }
+              p:nth-of-type(2){
+                font-size: 0.26rem;
+                color: #666;
+                margin-top: 0.05rem;
+              }
+            }
+          }
+        }
+      }
+      .search-current{
+        display: none;
+        width: 100%;
+        overflow: hidden;
+        .current-top{
+          width: 100%;
+          height: 1.1rem;
+          line-height: 1.1rem;
+          font-size: 0.3rem;
+          color: darkblue;
+          border-bottom: 1px solid #ccc;
+        }
+        .current-bottom{
+          li{
+            height: 1.1rem;
+            line-height: 1.1rem;
+            border-bottom: 1px solid #ccc;
+            display: flex;
+            justify-content: flex-start;
+            img{
+              width: 0.42rem;
+              height: 0.42rem;
+              margin-right: 0.2rem;
+              position: relative;
+              top: 0.35rem;
+            }
+            p{
+              font-size: 0.3rem;
+              color: #666;
+            }
+          }
+        }
+      }
+    }
+  }
+}

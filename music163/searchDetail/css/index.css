@@ -1,0 +1,662 @@
+@charset "UTF-8";
+html, body {
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  background-color: transparent;
+  font: 14px/1.5 Helvetica, sans-serif, STHeiTi;
+  color: #333;
+  outline: 0;
+}
+
+img {
+  vertical-align: bottom;
+}
+
+.fluid-img {
+  width: 100%;
+}
+
+/*浮动工具类*/
+.fl {
+  float: left;
+}
+
+.fr {
+  float: right;
+}
+
+/*清除浮动工具类*/
+.clearfix::after {
+  content: "";
+  display: block;
+  height: 0;
+  visibility: hidden;
+  clear: both;
+}
+
+.clearfix {
+  *zoom: 1;
+}
+
+/*自定义居中混合*/
+.header {
+  width: 100%;
+  height: 0.88rem;
+  line-height: 0.88rem;
+  padding: 0 0.3rem;
+  box-sizing: border-box;
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 999;
+}
+.header .header-in {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: flex-start;
+  background: skyblue;
+}
+.header .header-in img {
+  width: 0.56rem;
+  height: 0.56rem;
+  margin-right: 0.2rem;
+  margin-top: 0.15rem;
+}
+.header .header-in .search-box {
+  flex: 1;
+  height: 0.72rem;
+  border-radius: 0.36rem;
+  background: #f8f8f8;
+  margin-top: 0.08rem;
+  overflow: hidden;
+  position: relative;
+}
+.header .header-in .search-box img:nth-of-type(1) {
+  width: 0.42rem;
+  height: 0.42rem;
+  position: absolute;
+  left: 0.2rem;
+}
+.header .header-in .search-box input {
+  width: 100%;
+  height: 100%;
+  border: none;
+  outline: none;
+  padding-left: 0.82rem;
+  font-size: 0.3rem;
+}
+.header .header-in .search-box img:nth-of-type(2) {
+  width: 0.32rem;
+  height: 0.32rem;
+  position: absolute;
+  right: 0.2rem;
+  top: 0.05rem;
+}
+
+.nav {
+  width: 100%;
+  padding: 0 0.3rem;
+  box-sizing: border-box;
+  height: 0.88rem;
+  line-height: 0.88rem;
+  background: #fff;
+  position: fixed;
+  left: 0;
+  top: 0.88rem;
+  z-index: 999;
+  border-bottom: 1px solid #ccc;
+}
+.nav ul {
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: nowrap;
+}
+.nav ul li {
+  font-size: 0.3rem;
+  padding: 0 0.25rem;
+  white-space: nowrap;
+}
+.nav ul li.active {
+  color: #f00;
+}
+.nav ul span {
+  height: 0.02rem;
+  background: #f00;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+}
+
+.main {
+  width: 100%;
+  height: 13.4rem;
+  padding: 1.76rem 0.3rem 0.98rem 0.3rem;
+  box-sizing: border-box;
+}
+.main .main-in {
+  width: 100%;
+}
+.main .main-in > div {
+  display: none;
+}
+.main .main-in > div.active {
+  display: block;
+}
+.main .main-in .pull-up {
+  display: none;
+  width: 100%;
+  height: 0.98rem;
+}
+.main .main-in .pull-up p {
+  text-align: center;
+  padding-top: 0.29rem;
+  box-sizing: border-box;
+  font-size: 0.24rem;
+}
+
+.song {
+  width: 100%;
+}
+.song .top {
+  width: 100%;
+  height: 0.98rem;
+  line-height: 0.98rem;
+  display: flex;
+  justify-content: space-between;
+  background: #fff;
+  position: relative;
+  left: 0;
+  top: 0;
+  z-index: 999;
+  border-bottom: 1px solid #ccc;
+}
+.song .top.active .top-left p:nth-of-type(1) {
+  display: inline-block;
+}
+.song .top.active .top-left p:nth-of-type(2) {
+  display: none;
+}
+.song .top.active .top-right > span {
+  display: inline-block;
+}
+.song .top.active .top-right p {
+  display: none;
+}
+.song .top .top-left {
+  display: flex;
+  justify-content: flex-start;
+  height: 100%;
+}
+.song .top .top-left p {
+  height: 100%;
+  display: flex;
+  justify-content: flex-start;
+}
+.song .top .top-left p i {
+  display: inline-block;
+  width: 0.56rem;
+  height: 0.56rem;
+  border: 1px solid #000;
+  border-radius: 50%;
+  box-sizing: border-box;
+  position: relative;
+  top: 0.21rem;
+  background-size: 100% auto;
+}
+.song .top .top-left p span {
+  font-size: 0.32rem;
+  font-weight: bold;
+  margin-left: 0.2rem;
+}
+.song .top .top-left p img {
+  width: 0.56rem;
+  height: 0.56rem;
+  position: relative;
+  top: 0.21rem;
+}
+.song .top .top-left p:nth-of-type(1) {
+  display: none;
+}
+.song .top .top-left .check-all.active i {
+  background: url("./../images/detail-it666-checked.png") no-repeat;
+  background-size: 100% auto;
+}
+.song .top .top-right {
+  display: flex;
+  justify-content: flex-start;
+}
+.song .top .top-right p {
+  display: flex;
+  justify-content: flex-start;
+}
+.song .top .top-right p img {
+  width: 0.36rem;
+  height: 0.36rem;
+  vertical-align: top;
+  position: relative;
+  top: 0.31rem;
+}
+.song .top .top-right p span {
+  font-size: 0.28rem;
+}
+.song .top .top-right > span {
+  display: none;
+  font-size: 0.32rem;
+  color: #f00;
+}
+.song .list {
+  width: 100%;
+}
+.song .list.active .bottom-left i {
+  display: inline-block;
+}
+.song .list.active .bottom-right {
+  display: none;
+}
+.song .list li {
+  height: 0.98rem;
+  display: flex;
+  justify-content: space-between;
+  background: #fff;
+  border-bottom: 1px solid #ccc;
+}
+.song .list li .bottom-left {
+  display: flex;
+  justify-content: flex-start;
+}
+.song .list li .bottom-left i {
+  display: none;
+  width: 0.56rem;
+  height: 0.56rem;
+  border: 1px solid #000;
+  border-radius: 50%;
+  box-sizing: border-box;
+  position: relative;
+  top: 0.21rem;
+  margin-right: 0.2rem;
+}
+.song .list li .bottom-left p {
+  width: 5rem;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.song .list li .bottom-left p:nth-of-type(1) {
+  font-size: 0.32rem;
+  font-weight: bold;
+  padding-top: 0.1rem;
+}
+.song .list li .bottom-left p:nth-of-type(2) {
+  font-size: 0.26rem;
+  color: #666;
+}
+.song .list li .bottom-left p:nth-of-type(2) img {
+  width: auto;
+  height: 0.26rem;
+  vertical-align: top;
+  position: relative;
+  top: 0.05rem;
+}
+.song .list li .bottom-right {
+  display: flex;
+  justify-content: flex-start;
+}
+.song .list li .bottom-right img {
+  width: 0.56rem;
+  height: 0.56rem;
+  position: relative;
+  top: 0.21rem;
+}
+.song .list li.active .bottom-left i {
+  background: url("./../images/detail-it666-checked.png") no-repeat;
+  background-size: 100% auto;
+}
+
+.video {
+  width: 100%;
+}
+.video .list {
+  width: 100%;
+}
+.video .list li {
+  width: 100%;
+  height: 1.6rem;
+  display: flex;
+  justify-content: flex-start;
+  background: #fff;
+}
+.video .list li .video-left {
+  position: relative;
+  top: 0.1rem;
+}
+.video .list li .video-left img {
+  width: 2.5rem;
+  height: 1.4rem;
+  border-radius: 0.1rem;
+  overflow: hidden;
+}
+.video .list li .video-left p {
+  position: absolute;
+  top: 0.1rem;
+  right: 0.1rem;
+}
+.video .list li .video-left p img {
+  width: 0.36rem;
+  height: 0.36rem;
+}
+.video .list li .video-left p span {
+  font-size: 0.26rem;
+  color: #fff;
+}
+.video .list li .video-right {
+  position: relative;
+  left: 0.2rem;
+  top: 0.2rem;
+  padding-right: 0.2rem;
+  box-sizing: border-box;
+}
+.video .list li .video-right .video-title, .video .list li .video-right .video-info {
+  display: -webkit-box;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  -webkit-box-orient: vertical;
+}
+.video .list li .video-right .video-title {
+  font-size: 0.3rem;
+  -webkit-line-clamp: 2;
+}
+.video .list li .video-right .video-info {
+  font-size: 0.22rem;
+  color: #666;
+  -webkit-line-clamp: 1;
+}
+
+.artist {
+  width: 100%;
+}
+.artist .list li {
+  width: 100%;
+  height: 1.4rem;
+  line-height: 1.4rem;
+  display: flex;
+  justify-content: space-between;
+  background: #fff;
+}
+.artist .list li .singer-left {
+  display: flex;
+  justify-content: flex-start;
+}
+.artist .list li .singer-left img {
+  width: 1rem;
+  height: 1rem;
+  border-radius: 50%;
+  overflow: hidden;
+  position: relative;
+  top: 0.2rem;
+  margin-right: 0.2rem;
+}
+.artist .list li .singer-left p {
+  width: 4rem;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  font-size: 0.32rem;
+}
+.artist .list li .singer-right img {
+  width: 0.3rem;
+  height: 0.3rem;
+  border-radius: 50%;
+  overflow: hidden;
+  vertical-align: top;
+  position: relative;
+  top: 0.55rem;
+}
+.artist .list li .singer-right span {
+  font-size: 0.22rem;
+  color: #666;
+}
+
+.album {
+  width: 100%;
+}
+.album .list li {
+  width: 100%;
+  height: 1.2rem;
+  display: flex;
+  justify-content: flex-start;
+  padding-top: 0.1rem;
+  box-sizing: border-box;
+  background: #fff;
+}
+.album .list li div:nth-of-type(1) {
+  width: 1.05rem;
+  height: 0.9rem;
+  border: 1px solid #000;
+  display: flex;
+  justify-content: flex-start;
+  margin-right: 0.2rem;
+}
+.album .list li div:nth-of-type(1) img:nth-of-type(1) {
+  width: 1rem;
+  height: 1rem;
+  border-radius: 0.1rem;
+  position: relative;
+  top: -0.05rem;
+}
+.album .list li div:nth-of-type(1) img:nth-of-type(2) {
+  height: 0.8rem;
+  position: relative;
+  top: 0.05rem;
+}
+.album .list li div:nth-of-type(2) {
+  padding-top: 0.1rem;
+}
+.album .list li div:nth-of-type(2) .album-title {
+  font-size: 0.32rem;
+}
+.album .list li div:nth-of-type(2) .album-info {
+  font-size: 0.22rem;
+  color: #666;
+}
+
+.playList {
+  width: 100%;
+}
+.playList .list li {
+  width: 100%;
+  height: 1.2rem;
+  display: flex;
+  justify-content: flex-start;
+  background: #fff;
+  padding-top: 0.1rem;
+  box-sizing: border-box;
+}
+.playList .list li img {
+  width: 1rem;
+  height: 1rem;
+  border-radius: 0.1rem;
+  margin-right: 0.2rem;
+}
+.playList .list li div {
+  padding-top: 0.1rem;
+}
+.playList .list li div p {
+  width: 5.7rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.playList .list li div .play-title {
+  font-size: 0.32rem;
+}
+.playList .list li div .play-info {
+  font-size: 0.22rem;
+}
+
+.djRadio {
+  width: 100%;
+}
+.djRadio .list li {
+  width: 100%;
+  height: 1.2rem;
+  display: flex;
+  justify-content: flex-start;
+  background: #fff;
+  padding-top: 0.1rem;
+  box-sizing: border-box;
+}
+.djRadio .list li img {
+  width: 1rem;
+  height: 1rem;
+  border-radius: 0.1rem;
+  margin-right: 0.2rem;
+}
+.djRadio .list li div {
+  padding-top: 0.1rem;
+}
+.djRadio .list li div p {
+  width: 5.7rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.djRadio .list li div .dj-title {
+  font-size: 0.32rem;
+}
+.djRadio .list li div .dj-info {
+  font-size: 0.22rem;
+}
+
+.user {
+  width: 100%;
+}
+.user .list li {
+  width: 100%;
+  height: 1.2rem;
+  display: flex;
+  justify-content: space-between;
+  background: #fff;
+  padding-top: 0.1rem;
+  box-sizing: border-box;
+}
+.user .list li > div {
+  width: 5.7rem;
+  display: flex;
+  justify-content: flex-start;
+}
+.user .list li > div .user-logo {
+  width: 1rem;
+  height: 1rem;
+  margin-right: 0.2rem;
+  position: relative;
+}
+.user .list li > div .user-logo img:nth-of-type(1) {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+}
+.user .list li > div .user-logo img:nth-of-type(2) {
+  width: 0.3rem;
+  height: 0.3rem;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+}
+.user .list li > div .user-des {
+  padding-top: 0.1rem;
+}
+.user .list li > div .user-des p {
+  width: 4.5rem;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.user .list li > div .user-des .user-title {
+  font-size: 0.32rem;
+}
+.user .list li > div .user-des .user-title img {
+  width: 0.3rem;
+  vertical-align: top;
+}
+.user .list li > div .user-des .user-info {
+  font-size: 0.22rem;
+  color: #666;
+}
+.user .list li span {
+  width: 1.2rem;
+  height: 0.5rem;
+  line-height: 0.5rem;
+  text-align: center;
+  border: 1px solid #f00;
+  border-radius: 0.25rem;
+  color: #f00;
+  font-size: 0.22rem;
+  position: relative;
+  top: 0.3rem;
+}
+
+.sim_query {
+  width: 100%;
+}
+.sim_query .list {
+  width: 100%;
+  overflow: hidden;
+  padding-top: 0.2rem;
+}
+.sim_query .list li {
+  float: left;
+  height: 0.5rem;
+  line-height: 0.5rem;
+  text-align: center;
+  font-size: 0.3rem;
+  background: #f8f8f8;
+  border-radius: 0.25rem;
+  padding: 0 0.2rem;
+  margin: 0.2rem 0.2rem 0.2rem 0;
+}
+
+.composite {
+  width: 100%;
+}
+.composite .composite-category {
+  width: 100%;
+}
+.composite .composite-category .composite-top {
+  width: 100%;
+  height: 0.88rem;
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid #ccc;
+}
+.composite .composite-category .composite-top h6 {
+  font-size: 0.32rem;
+  font-weight: bold;
+  color: #333;
+  line-height: 0.88rem;
+}
+.composite .composite-category .composite-top span {
+  width: 1.2rem;
+  height: 0.5rem;
+  line-height: 0.5rem;
+  text-align: center;
+  font-size: 0.26rem;
+  border: 1px solid #000;
+  border-radius: 0.25rem;
+  padding: 0 0.2rem;
+  position: relative;
+  top: 0.16rem;
+}
+.composite .composite-category .composite-bottom {
+  width: 100%;
+  height: 0.88rem;
+  line-height: 0.88rem;
+  text-align: center;
+  font-size: 0.22rem;
+  color: #666;
+}
+
+/*# sourceMappingURL=index.css.map */

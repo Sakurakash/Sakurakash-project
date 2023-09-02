@@ -1,0 +1,378 @@
+@charset "UTF-8";
+html, body {
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  background-color: transparent;
+  font: 14px/1.5 Helvetica, sans-serif, STHeiTi;
+  color: #333;
+  outline: 0;
+}
+
+img {
+  vertical-align: bottom;
+}
+
+.fluid-img {
+  width: 100%;
+}
+
+/*浮动工具类*/
+.fl {
+  float: left;
+}
+
+.fr {
+  float: right;
+}
+
+/*清除浮动工具类*/
+.clearfix::after {
+  content: "";
+  display: block;
+  height: 0;
+  visibility: hidden;
+  clear: both;
+}
+
+.clearfix {
+  *zoom: 1;
+}
+
+/*自定义居中混合*/
+.header {
+  width: 100%;
+  height: 0.88rem;
+  padding: 0 0.2rem;
+  box-sizing: border-box;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  background: #fcfcfd;
+}
+.header .header-default {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  z-index: 999;
+}
+.header .header-default .header-center {
+  width: 100%;
+  height: 100%;
+  float: left;
+}
+.header .header-default .header-center .header-box {
+  height: 0.72rem;
+  margin: 0.08rem 1.2rem 0;
+  background: #f7f7f7;
+  border-radius: 0.36rem;
+  position: relative;
+  overflow: hidden;
+}
+.header .header-default .header-center .header-box img {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 0.56rem;
+}
+.header .header-default .header-center .header-box input {
+  width: 100%;
+  height: 100%;
+  border: none;
+  outline: none;
+  padding-left: 1.08rem;
+  box-sizing: border-box;
+  font-size: 0.3rem;
+  background: #f6f6f7;
+  color: #c9c9c9;
+}
+.header .header-default .header-center .header-box .header-title {
+  display: none;
+}
+.header .header-default .header-center .header-box .header-switch {
+  display: none;
+}
+.header .header-default .header-cancel {
+  display: none;
+}
+.header .header-default .header-left, .header .header-default .header-right {
+  width: 0.56rem;
+  height: 0.56rem;
+  margin-top: 0.16rem;
+  float: left;
+}
+.header .header-default .header-left {
+  margin-left: -100%;
+  background: url("../../common/images/topbar-it666-discern.png") no-repeat;
+  background-size: 100% auto;
+}
+.header .header-default .header-right {
+  margin-left: -0.56rem;
+  background: url("../../common/images/topbar-it666-play.png") no-repeat;
+  background-size: 100% auto;
+}
+.header.active .header-default .header-left {
+  display: none;
+}
+.header.active .header-default .header-right {
+  background: url("../../common/images/topbar-it666-category.png") no-repeat;
+  background-size: 100% auto;
+}
+.header.active .header-default .header-box {
+  margin: 0.08rem 2.4rem 0 0;
+}
+.header.active .header-default .header-box img {
+  left: 0.22rem;
+}
+.header.active .header-default .header-box input {
+  padding-left: 0.74rem;
+}
+.header.active .header-default .header-cancel {
+  display: inline-block;
+  float: left;
+  margin-left: -2rem;
+  line-height: 0.88rem;
+  font-size: 0.32rem;
+}
+.header.active .header-default .header-cancel a {
+  color: #333;
+  font-weight: bold;
+}
+.header.video .header-default .header-left {
+  background: url("../../common/images/topbar-it666-video.png") no-repeat;
+  background-size: 100% auto;
+}
+.header.me .header-default .header-left {
+  background: url("../../common/images/topbar-it666-cloud.png") no-repeat;
+  background-size: 100% auto;
+}
+.header.me .header-default .header-box {
+  background: transparent;
+}
+.header.me .header-default .header-box img {
+  display: none;
+}
+.header.me .header-default .header-box input {
+  display: none;
+}
+.header.me .header-default .header-box .header-title {
+  display: block;
+  line-height: 0.72rem;
+  text-align: center;
+  font-weight: bold;
+  font-size: 0.34rem;
+}
+.header.friend .header-default .header-left {
+  background: url("../../common/images/topbar-it666-add.png") no-repeat;
+  background-size: 100% auto;
+}
+.header.friend .header-default .header-center .header-box {
+  background: transparent;
+}
+.header.friend .header-default .header-center .header-box img {
+  display: none;
+}
+.header.friend .header-default .header-center .header-box input {
+  display: none;
+}
+.header.friend .header-default .header-center .header-box .header-switch {
+  display: flex;
+  width: 2.8rem;
+  height: 0.58rem;
+  margin: 0 auto;
+  border: 1px solid #ffcbc8;
+  border-radius: 0.29rem;
+  position: relative;
+}
+.header.friend .header-default .header-center .header-box .header-switch i {
+  display: block;
+  width: 1.4rem;
+  height: 100%;
+  border-radius: 0.29rem;
+  background: #fd271b;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+.header.friend .header-default .header-center .header-box .header-switch span {
+  position: relative;
+  z-index: 1;
+  width: 1.4rem;
+  height: 100%;
+  text-align: center;
+  font-weight: bold;
+  line-height: 0.58rem;
+  font-size: 0.34rem;
+  color: #fd271b;
+}
+.header.friend .header-default .header-center .header-box .header-switch span.active {
+  color: #fff;
+}
+.header.account .header-default .header-left {
+  background: url("../../common/images/topbar-it666-scan.png") no-repeat;
+  background-size: 100% auto;
+}
+.header.account .header-default .header-box {
+  display: none;
+}
+.header .header-container {
+  display: none;
+  width: 100%;
+  height: 15rem;
+  background: #fff;
+}
+.header .header-container .header-wrapper .search-ad {
+  padding-top: 0.3rem;
+  position: relative;
+}
+.header .header-container .header-wrapper .search-ad img {
+  border-radius: 0.2rem;
+}
+.header .header-container .header-wrapper .search-ad span {
+  position: absolute;
+  top: 0.4rem;
+  right: 0.1rem;
+  font-size: 0.3rem;
+  color: #fff;
+}
+.header .header-container .header-wrapper .search-history {
+  width: 100%;
+  height: 1.95rem;
+  padding: 0.36rem 0;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+.header .header-container .header-wrapper .search-history .history-top {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+.header .header-container .header-wrapper .search-history .history-top h6 {
+  font-size: 0.26rem;
+  font-weight: bold;
+  color: #333;
+}
+.header .header-container .header-wrapper .search-history .history-top img {
+  width: 0.56rem;
+  height: 0.56rem;
+  position: relative;
+  top: -0.05rem;
+}
+.header .header-container .header-wrapper .search-history .history-bottom {
+  width: 100%;
+  white-space: nowrap;
+  overflow-x: scroll;
+  /*
+  // 注意点: -webkit-scrollbar是webkit内核浏览器的私有属性
+  //         只有在谷歌浏览器和苹果的浏览器上有效
+  &::-webkit-scrollbar{
+    display: none;
+  }
+   */
+  padding-bottom: 1rem;
+}
+.header .header-container .header-wrapper .search-history .history-bottom li {
+  display: inline-block;
+  font-size: 0.26rem;
+  text-align: center;
+  color: #333;
+  padding: 0.14rem 0.3rem;
+  background: #f8f8f8;
+  border-radius: 0.33rem;
+  margin-right: 0.24rem;
+}
+.header .header-container .header-wrapper .search-history .history-bottom li:last-child {
+  margin-right: 0;
+}
+.header .header-container .header-wrapper .search-hot {
+  padding: 0.36rem 0;
+}
+.header .header-container .header-wrapper .search-hot .hot-top {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+.header .header-container .header-wrapper .search-hot .hot-top h6 {
+  font-size: 0.26rem;
+  font-weight: bold;
+  color: #333;
+}
+.header .header-container .header-wrapper .search-hot .hot-bottom {
+  list-style: none;
+}
+.header .header-container .header-wrapper .search-hot .hot-bottom li {
+  width: 100%;
+  height: 1.34rem;
+  display: flex;
+  justify-content: flex-start;
+}
+.header .header-container .header-wrapper .search-hot .hot-bottom li:nth-of-type(1) .hot-left, .header .header-container .header-wrapper .search-hot .hot-bottom li:nth-of-type(2) .hot-left, .header .header-container .header-wrapper .search-hot .hot-bottom li:nth-of-type(3) .hot-left {
+  color: red;
+}
+.header .header-container .header-wrapper .search-hot .hot-bottom li .hot-left {
+  width: 0.54rem;
+  height: 100%;
+  line-height: 1.34rem;
+  font-size: 0.3rem;
+  color: #666;
+}
+.header .header-container .header-wrapper .search-hot .hot-bottom li .hot-right p:nth-of-type(1) {
+  padding-top: 0.2rem;
+}
+.header .header-container .header-wrapper .search-hot .hot-bottom li .hot-right p:nth-of-type(1) strong {
+  font-size: 0.32rem;
+  font-weight: bold;
+  color: #333;
+}
+.header .header-container .header-wrapper .search-hot .hot-bottom li .hot-right p:nth-of-type(1) span {
+  font-size: 0.26rem;
+  color: #ccc;
+  margin: 0 0.2rem;
+}
+.header .header-container .header-wrapper .search-hot .hot-bottom li .hot-right p:nth-of-type(1) img {
+  width: auto;
+  height: 0.32rem;
+  position: relative;
+  top: -0.1rem;
+}
+.header .header-container .header-wrapper .search-hot .hot-bottom li .hot-right p:nth-of-type(2) {
+  font-size: 0.26rem;
+  color: #666;
+  margin-top: 0.05rem;
+}
+.header .header-container .header-wrapper .search-current {
+  display: none;
+  width: 100%;
+  overflow: hidden;
+}
+.header .header-container .header-wrapper .search-current .current-top {
+  width: 100%;
+  height: 1.1rem;
+  line-height: 1.1rem;
+  font-size: 0.3rem;
+  color: darkblue;
+  border-bottom: 1px solid #ccc;
+}
+.header .header-container .header-wrapper .search-current .current-bottom li {
+  height: 1.1rem;
+  line-height: 1.1rem;
+  border-bottom: 1px solid #ccc;
+  display: flex;
+  justify-content: flex-start;
+}
+.header .header-container .header-wrapper .search-current .current-bottom li img {
+  width: 0.42rem;
+  height: 0.42rem;
+  margin-right: 0.2rem;
+  position: relative;
+  top: 0.35rem;
+}
+.header .header-container .header-wrapper .search-current .current-bottom li p {
+  font-size: 0.3rem;
+  color: #666;
+}
+
+/*# sourceMappingURL=header.css.map */

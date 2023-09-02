@@ -1,0 +1,301 @@
+@charset "UTF-8";
+html, body {
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  background-color: transparent;
+  font: 14px/1.5 Helvetica, sans-serif, STHeiTi;
+  color: #333;
+  outline: 0;
+}
+
+img {
+  vertical-align: bottom;
+}
+
+.fluid-img {
+  width: 100%;
+}
+
+/*浮动工具类*/
+.fl {
+  float: left;
+}
+
+.fr {
+  float: right;
+}
+
+/*清除浮动工具类*/
+.clearfix::after {
+  content: "";
+  display: block;
+  height: 0;
+  visibility: hidden;
+  clear: both;
+}
+
+.clearfix {
+  *zoom: 1;
+}
+
+/*自定义居中混合*/
+.main {
+  width: 100%;
+  height: 100%;
+}
+.main .main-in {
+  width: 100%;
+  height: 46rem;
+  padding: 0 0.3rem;
+  box-sizing: border-box;
+}
+.main .main-in .pull-down {
+  width: 100%;
+  height: 0.88rem;
+  text-align: center;
+  position: relative;
+}
+.main .main-in .pull-down img {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+.main .main-in .pull-down svg {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+.main .main-in .swiper {
+  width: 6.9rem;
+  height: 2.66rem;
+  margin-top: 0.15rem;
+  border-radius: 0.15rem;
+}
+.main .main-in .swiper .swiper-pagination .my-bullet {
+  display: inline-block;
+  width: 0.14rem;
+  height: 0.14rem;
+  margin: 0 0.06rem;
+  border-radius: 50%;
+  background: #ccc;
+}
+.main .main-in .swiper .swiper-pagination .my-bullet-active {
+  background: #fd271b;
+}
+.main .main-in .swiper .swiper-wrapper .swiper-slide span {
+  padding: 0.05rem 0.1rem;
+  font-size: 0.22rem;
+  color: #fff;
+  background: deepskyblue;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  border-top-left-radius: 0.15rem;
+}
+.main .main-in .nav {
+  width: 100%;
+  padding: 0.44rem 0;
+}
+.main .main-in .nav ul {
+  display: flex;
+}
+.main .main-in .nav ul li {
+  margin-right: 0.5rem;
+  text-align: center;
+}
+.main .main-in .nav ul li:last-child {
+  margin-right: 0;
+}
+.main .main-in .nav ul li img {
+  width: 0.98rem;
+  border-radius: 50%;
+  background: #fd271b;
+  margin-bottom: 0.2rem;
+}
+.main .main-in .nav ul li span {
+  font-size: 0.22rem;
+  padding-top: 0.2rem;
+}
+.main .main-in .nav ul li p {
+  position: relative;
+}
+.main .main-in .nav ul li p i {
+  font-size: 0.22rem;
+  color: #fd271b;
+  font-style: normal;
+  font-weight: bold;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 30%;
+}
+.main .main-in .public-content {
+  width: 100%;
+  border-top: 1px solid #ccc;
+}
+.main .main-in .public-content .public-top {
+  width: 100%;
+  height: 1.2rem;
+  display: flex;
+  justify-content: space-between;
+}
+.main .main-in .public-content .public-top h3 {
+  font-size: 0.34rem;
+  font-weight: bold;
+  line-height: 1.2rem;
+}
+.main .main-in .public-content .public-top span {
+  font-size: 0.26rem;
+  padding: 0.1rem 0.2rem;
+  border: 1px solid #ccc;
+  height: 0.66rem;
+  text-align: center;
+  box-sizing: border-box;
+  border-radius: 0.33rem;
+  font-weight: bold;
+  margin-top: 0.27rem;
+}
+.main .main-in .public-content .public-bottom {
+  width: 100%;
+}
+.main .main-in .public-content .public-bottom ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.main .main-in .public-content .public-bottom ul li {
+  margin-bottom: 0.4rem;
+}
+.main .main-in .public-content .public-bottom ul li div {
+  border-radius: 0.15rem;
+  overflow: hidden;
+  position: relative;
+}
+.main .main-in .public-content .public-bottom ul li > p:nth-of-type(1) {
+  display: -webkit-box;
+  margin-top: 0.15rem;
+  font-size: 0.26rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  -webkit-box-orient: vertical;
+}
+.main .main-in .recommend .recommend-bottom ul li div {
+  width: 2.16rem;
+  height: 2.16rem;
+}
+.main .main-in .recommend .recommend-bottom ul li div p {
+  background: rgba(51, 51, 51, 0.7);
+  position: absolute;
+  top: 0.1rem;
+  right: 0.1rem;
+  border-radius: 0.2rem;
+}
+.main .main-in .recommend .recommend-bottom ul li div p img {
+  width: 0.26rem;
+  margin-left: 0.1rem;
+  vertical-align: text-bottom;
+}
+.main .main-in .recommend .recommend-bottom ul li div p span {
+  font-size: 0.26rem;
+  margin-right: 0.1rem;
+  color: #fff;
+}
+.main .main-in .recommend .recommend-bottom ul li > p {
+  width: 2.16rem;
+  -webkit-line-clamp: 2;
+}
+.main .main-in .exclusive .exclusive-bottom ul li div {
+  width: 3.34rem;
+}
+.main .main-in .exclusive .exclusive-bottom ul li div i {
+  display: inline-block;
+  width: 0.34rem;
+  height: 0.34rem;
+  background: url("../../images/home-small-exclusive.png") no-repeat;
+  background-size: 100% auto;
+  position: absolute;
+  left: 0.1rem;
+  top: 0.1rem;
+}
+.main .main-in .exclusive .exclusive-bottom ul li p {
+  width: 3.34rem;
+  overflow: hidden;
+  -webkit-line-clamp: 2;
+}
+.main .main-in .exclusive .exclusive-bottom ul li:last-child div, .main .main-in .exclusive .exclusive-bottom ul li:last-child p {
+  width: 6.9rem;
+}
+.main .main-in .album .album-bottom ul li div {
+  width: 2.16rem;
+  height: 2.16rem;
+}
+.main .main-in .album .album-bottom ul li .album-title {
+  width: 2.16rem;
+  color: #333;
+  -webkit-line-clamp: 1;
+}
+.main .main-in .album .album-bottom ul li .album-singer {
+  width: 2.16rem;
+  margin-top: 0.15rem;
+  font-size: 0.24rem;
+  color: #ccc;
+}
+.main .main-in .mv .mv-bottom ul li div {
+  width: 3.34rem;
+}
+.main .main-in .mv .mv-bottom ul li div p {
+  background: rgba(51, 51, 51, 0.7);
+  position: absolute;
+  top: 0.1rem;
+  right: 0.1rem;
+  border-radius: 0.2rem;
+}
+.main .main-in .mv .mv-bottom ul li div p img {
+  width: 0.26rem;
+  margin-left: 0.1rem;
+  vertical-align: text-bottom;
+}
+.main .main-in .mv .mv-bottom ul li div p span {
+  font-size: 0.26rem;
+  margin-right: 0.1rem;
+  color: #fff;
+}
+.main .main-in .mv .mv-bottom ul li .mv-tittle {
+  width: 3.34rem;
+  -webkit-line-clamp: 2;
+}
+.main .main-in .mv .mv-bottom ul li .mv-singer {
+  width: 3.34rem;
+  font-size: 0.24rem;
+  color: #ccc;
+}
+.main .main-in .dj .dj-bottom ul li div {
+  width: 2.16rem;
+  height: 2.16rem;
+}
+.main .main-in .dj .dj-bottom ul li div p {
+  position: absolute;
+  bottom: 0.1rem;
+  right: 0.1rem;
+}
+.main .main-in .dj .dj-bottom ul li div p img {
+  width: 0.26rem;
+  margin-left: 0.1rem;
+  vertical-align: text-bottom;
+}
+.main .main-in .dj .dj-bottom ul li div p span {
+  font-size: 0.26rem;
+  margin-right: 0.1rem;
+  color: #fff;
+}
+.main .main-in .dj .dj-bottom ul li > p {
+  width: 2.16rem;
+  -webkit-line-clamp: 2;
+}
+
+/*# sourceMappingURL=index.css.map */

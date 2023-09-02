@@ -79,6 +79,11 @@
 			<li>项目描述：仿制华为官网首页，使用了bootstrap框架及各类动画库，实现了响应式布局及视差滚动的效果。</li>
 		</ul>
 	</li>
+	<li><p><strong><a href="https://sakurakash.github.io/project/music163/home/index.html" target="_blank">网易云音乐Web App</a></strong></p>
+		<ul>
+			<li>利用网易云音乐官方API，开发了一个功能较为完整的网易云音乐Web App，查看前需前往 <a href="https://neteasecloudmusicapi.js.org/#/">网易云音乐API官网</a>下载API文件，并在node中运行app.js以运行服务器（项目默认端口为3000，如有需要请在js文件夹下api.js中更改）</li>
+		</ul>
+	</li>
 </ol>
 <h2>许可证</h2>
 <p>这个仓库中的项目使用 <a href="LICENSE" target="_new">MIT许可证</a> 进行许可。</p>

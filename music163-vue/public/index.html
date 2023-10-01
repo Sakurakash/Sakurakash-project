@@ -27,11 +27,12 @@
         也正是因为预渲染的时候已经写入过meta标签了, 而运行的时候又会执行一次JS代码再写入一次
         就导致了网页中有两个meta标签
         * */
-		let scale = 1.0 / window.devicePixelRatio;
+		let ratio = window.devicePixelRatio;
+		let scale = 1.0 / ratio;
 		let text = `<meta name="viewport" content="width=device-width, initial-scale=${scale}, maximum-scale=${scale}, minimum-scale=${scale}, user-scalable=no">`;
 		document.write(text);
 		document.documentElement.style.fontSize = window.innerWidth / 7.5 + "px";
-		document.documentElement.setAttribute('data-dpr', window.devicePixelRatio + '');
+		document.documentElement.setAttribute('data-dpr', Math.round(ratio) === 2 || Math.floor(ratio) === 3 ? ratio.toFixed(0) : 3 + '');
 		document.documentElement.setAttribute('data-theme', 'theme');
 	</script>
 </head>

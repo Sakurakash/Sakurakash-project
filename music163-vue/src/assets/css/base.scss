@@ -8,6 +8,7 @@ html, body{
   overflow: hidden;
   // 解决IScroll拖拽卡顿问题
   touch-action: none;
+  @include bg_sub_color();
 }
 body{
   @include font_size($font_medium);

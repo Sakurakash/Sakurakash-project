@@ -14,7 +14,7 @@ $(function () {
         document.body.appendChild(sc);
     });
     // 公共内容处理
-    let length = Math.ceil($("#refreshLogo")[0].getTotalLength());
+    let length = Math.ceil($('#refreshLogo')[0].getTotalLength());
     $("#refreshLogo").css("stroke-dasharray", length);
     $("#refreshLogo").css("stroke-dashoffset", length);
     let myScroll = new IScroll('.main', {

@@ -1,6 +1,6 @@
 ;(function () {
-    axios.defaults.baseURL = 'http://127.0.0.1:3000';
-    axios.defaults.timeout = 3000;
+    axios.defaults.baseURL = 'https://netease-cloud-music-livid.vercel.app';
+    axios.defaults.timeout = 5000;
     class myHttp {
         static get(url='', data={}){
             return new Promise((resolve, reject) => {

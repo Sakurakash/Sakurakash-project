@@ -58,7 +58,7 @@ img {
   height: 100%;
   display: flex;
   justify-content: flex-start;
-  background: skyblue;
+  background: #fcfcfd;
 }
 .header .header-in img {
   width: 0.56rem;

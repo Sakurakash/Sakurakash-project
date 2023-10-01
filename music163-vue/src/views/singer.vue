@@ -2,7 +2,7 @@
     <div class="singer">
         <ScrollView ref="scrollView">
             <ul class="list-wrapper">
-               <li class="list-group" v-for="(value, index) in list" :key="index" ref="group">
+               <li class="list-group" v-for="(index) in list" :key="index" ref="group">
                    <h2 class="group-title">{{ keys[index] }}</h2>
                    <ul>
                        <li class="group-item" v-for="{id, img1v1Url, name} in list[index]" :key="id" @click.stop="switchSinger(id)">

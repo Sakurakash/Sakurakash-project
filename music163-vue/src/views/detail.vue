@@ -31,7 +31,7 @@ export default {
         ])
     },
     watch: {
-        isShowMiniPlayer (newValue) {
+        isShowMiniPlayer () {
             this.$refs.scrollView.refresh()
         }
     },

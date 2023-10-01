@@ -1,7 +1,6 @@
-<h1>简易前端项目整理(大学生课设可用)</h1>
-<p>这个仓库包含了我个人的一些项目，主要是静态网页的布局和一些小游戏，旨在记录自身前端能力的成长。</p>
-<p>作为一名大学生，我深知在计算机毕业设计阶段面临的挑战和困惑。因此，我希望将这些项目分享给所有忙于计算机毕业设计的大学生，作为他们设计和实现自己项目的参考和灵感。</p>
-<p>希望通过浏览这些项目，你可以获得前端开发的一些技巧，提升自己的编码能力。我希望这些作品能够对各位的毕业设计过程有所启发，并帮助各位在编程道路上取得进步。</p>
+<h1>个人前端项目整理</h1>
+<p>这个仓库包含了我个人的一些项目，主要是静态网页的布局和一些小游戏，后续还有一些SPA应用，旨在记录自身前端能力的成长。</p>
+<p>希望通过构建这些项目，可以获得一些前端开发的技巧，提升自己的编码能力。我希望这些作品能够对各位的前端学习过程有所启发，并帮助各位在编程道路上取得进步。</p>
 <h2>项目列表</h2>
 <ol>
 	<li><p><strong><a href="https://sakurakash.github.io/project/去哪儿/index.html" target="_blank">去哪儿</a></strong></p>
@@ -66,7 +65,7 @@
 	</li>
 	<li><p><strong><a href="https://sakurakash.github.io/project/酷狗音乐移动版/index.html" target="_blank">酷狗音乐移动版</a></strong></p>
 		<ul>
-			<li>项目描述：实现了移动端酷狗音乐的广告首页，使用了swiper插件</li>
+			<li>项目描述：使用了swiper插件，实现了移动端酷狗音乐的广告首页。</li>
 		</ul>
 	</li>
 	<li><p><strong><a href="https://sakurakash.github.io/project/养老院收藏管理系统/index.html" target="_blank">养老院收藏管理系统</a></strong></p>
@@ -81,10 +80,15 @@
 	</li>
 	<li><p><strong><a href="https://sakurakash.github.io/project/music163/home/index.html" target="_blank">网易云音乐Web App</a></strong></p>
 		<ul>
-			<li>利用网易云音乐官方API，开发了一个功能较为完整的网易云音乐Web App，查看前需前往 <a href="https://neteasecloudmusicapi.js.org/#/">网易云音乐API官网</a>下载API文件，并在node中运行app.js以运行服务器（项目默认端口为3000，如有需要请在js文件夹下api.js中更改）</li>
+			<li>利用<a href="https://neteasecloudmusicapi.js.org/#/">网易云音乐NodeJS版API</a>，开发了一个具有部分功能的网易云音乐Web App，通过原生js实现了歌曲的搜索，播放及页面跳转功能。
+			</li>
+		</ul>
+	</li>
+	<li><p><strong><a href="https://sakurakash.github.io/project/music163-vue/dist/index.html" target="_blank">网易云音乐Vue版Web App</a></strong></p>
+		<ul>
+			<li>利用<a href="https://neteasecloudmusicapi.js.org/#/">网易云音乐NodeJS版API</a>，结合vue框架的使用，开发了一个功能更加完整的网易云音乐SPA应用，为原生js版本的plus版本。通过复用封装的组件，极大地优化了项目的性能及可维护性。
+			</li>
 		</ul>
 	</li>
 </ol>
-<h2>许可证</h2>
-<p>这个仓库中的项目使用 <a href="LICENSE" target="_new">MIT许可证</a> 进行许可。</p>
-<p>我谨以谦卑的态度与各位共勉，希望这些项目能够为各位的毕业设计过程带来一些启发和帮助。如果你对这些项目有任何问题或建议，欢迎与我交流。祝愿大家在计算机毕业设计中取得优异的成果！</p>
+<p>我谨以谦卑的态度与各位共勉，希望这些项目能够为各位的前端学习过程带来一些启发和帮助。如果你对这些项目有任何问题或建议，欢迎与我交流。</p>

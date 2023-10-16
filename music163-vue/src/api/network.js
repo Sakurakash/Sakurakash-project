@@ -4,7 +4,6 @@ import Vue from 'vue'
 // 全局配置
 axios.defaults.baseURL = 'https://netease-cloud-music-livid.vercel.app'
 axios.defaults.timeout = 5000
-
 let count = 0
 // 添加请求拦截器
 axios.interceptors.request.use(config => {

@@ -84,9 +84,9 @@
 			</li>
 		</ul>
 	</li>
-	<li><p><strong>网易云音乐Vue版Web App</strong></p>
+	<li><p><strong><a href="https://sakurakash.github.io/project/music163-vue/dist/index.html" target="_blank">网易云音乐Vue版Web App</a></strong></p>
 		<ul>
-			<li>利用<a href="https://neteasecloudmusicapi.js.org/#/">网易云音乐NodeJS版API</a>，结合vue框架的使用，开发了一个功能更加完整的网易云音乐SPA应用，为原生js版本的plus版本。通过复用封装的组件，极大地优化了项目的性能及可维护性。(注：本项目使用Vue-CLI进行构建，打包后的静态文件需要在服务器上进行访问，故暂无链接可供访问，若要查看源码可前往我的<a href="https://github.com/Sakurakash/project">个人项目仓库</a>进行查看)
+			<li>利用<a href="https://neteasecloudmusicapi.js.org/#/">网易云音乐NodeJS版API</a>，结合vue框架的使用，开发了一个功能更加完整的网易云音乐SPA应用，为原生js版本的plus版本。通过复用封装的组件，极大地优化了项目的性能及可维护性。
 			</li>
 		</ul>
 	</li>

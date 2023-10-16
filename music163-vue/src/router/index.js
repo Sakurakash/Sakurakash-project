@@ -4,6 +4,8 @@ import VueRouter from 'vue-router'
 // import singer from '../views/singer.vue'
 // import rank from '../views/rank.vue'
 // import search from '../views/search.vue'
+// import account from '../views/account.vue'
+// import detail from '../views/detail.vue'
 
 // 实现组件的按需加载
 const recommend = () => import('../views/recommend.vue')
@@ -12,7 +14,6 @@ const singer = () => import('../views/singer.vue')
 const rank = () => import('../views/rank.vue')
 const search = () => import('../views/search.vue')
 const account = () => import('../views/account.vue')
-
 Vue.use(VueRouter)
 
 const routes = [
@@ -52,7 +53,7 @@ const routes = [
 ]
 
 const router = new VueRouter({
-    mode: 'history',
+    mode: 'hash',
     base: process.env.BASE_URL,
     routes: routes
 })

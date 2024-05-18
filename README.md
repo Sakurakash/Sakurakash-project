@@ -80,13 +80,19 @@
 	</li>
 	<li><p><strong><a href="https://sakurakash.github.io/project/music163/home/index.html" target="_blank">网易云音乐Web App</a></strong></p>
 		<ul>
-			<li>利用<a href="https://neteasecloudmusicapi.js.org/#/">网易云音乐NodeJS版API</a>，开发了一个具有部分功能的网易云音乐Web App，通过原生js实现了歌曲的搜索，播放及页面跳转功能。(注：本项目使用vercel进行部署，国内访问可能较为困难，若链接无法打开可参照官方文档进行部署后修改api/network.js文件中的请求地址进行查看)
+			<li>项目描述：利用<a href="https://neteasecloudmusicapi.js.org/#/">网易云音乐NodeJS版API</a>，开发了一个具有部分功能的网易云音乐Web App，通过原生js实现了歌曲的搜索，播放及页面跳转功能。(注：本项目使用vercel进行部署，国内访问可能较为困难，若链接无法打开可参照官方文档进行部署后修改api/network.js文件中的请求地址进行查看)
 			</li>
 		</ul>
 	</li>
 	<li><p><strong><a href="https://sakurakash.github.io/project/music163-vue/dist/index.html" target="_blank">网易云音乐Vue版Web App</a></strong></p>
 		<ul>
-			<li>利用<a href="https://neteasecloudmusicapi.js.org/#/">网易云音乐NodeJS版API</a>，结合vue框架的使用，开发了一个功能更加完整的网易云音乐SPA应用，为原生js版本的plus版本。通过复用封装的组件，极大地优化了项目的性能及可维护性。
+			<li>项目描述：利用<a href="https://neteasecloudmusicapi.js.org/#/">网易云音乐NodeJS版API</a>，结合vue框架的使用，开发了一个功能更加完整的网易云音乐SPA应用，为原生js版本的plus版本。通过复用封装的组件，极大地优化了项目的性能及可维护性。
+			</li>
+		</ul>
+	</li>
+    <li><p><strong><a href="https://sakurakash.github.io/project/吹牛概率计算器/index.html" target="_blank">吹牛概率计算器</a></strong></p>
+		<ul>
+			<li>项目描述：一个用于计算骰子吹牛游戏各情况出现概率的计算器。
 			</li>
 		</ul>
 	</li>

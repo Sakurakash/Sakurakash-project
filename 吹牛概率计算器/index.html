@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>吹牛概率计算器</title>
+	<link rel="stylesheet" href="css/reset.css">
+	<link rel="stylesheet" href="css/index.css">
+	<script>
+		let scale = 1.0 / window.devicePixelRatio;
+		let text = `<meta name="viewport" content="width=device-width, initial-scale=${scale}, maximum-scale=${scale}, minimum-scale=${scale}, user-scalable=no">`;
+		document.write(text);
+		document.documentElement.style.fontSize = window.innerWidth / 7.5 + "px";
+	</script>
+	<script src="js/jquery-3.1.1.js"></script>
+	<script src="js/iconfont.js"></script>
+	<script src="js/index.js"></script>
+</head>
+<body>
+<div class="header">吹牛概率计算器</div>
+<div class="option">
+	<div class="option1">
+		<div class="svg-box">
+			<svg class="icon icon-touzi2" aria-hidden="true">
+				<use xlink:href="#icon-touzi2"></use>
+			</svg>
+			<svg class="icon icon-touzi3" aria-hidden="true">
+				<use xlink:href="#icon-touzi3"></use>
+			</svg>
+			<svg class="icon icon-touzi5" aria-hidden="true">
+				<use xlink:href="#icon-touzi5"></use>
+			</svg>
+		</div>
+		<div class="rule rule1" value="3">三骰玩法</div>
+	</div>
+	<div class="option2">
+		<div class="svg-box">
+			<svg class="icon icon-touzi2" aria-hidden="true">
+				<use xlink:href="#icon-touzi2"></use>
+			</svg>
+			<svg class="icon icon-touzi2" aria-hidden="true">
+				<use xlink:href="#icon-touzi2"></use>
+			</svg>
+			<svg class="icon icon-touzi3" aria-hidden="true">
+				<use xlink:href="#icon-touzi4"></use>
+			</svg>
+			<svg class="icon icon-touzi5" aria-hidden="true">
+				<use xlink:href="#icon-touzi5"></use>
+			</svg>
+			<svg class="icon icon-touzi6" aria-hidden="true">
+				<use xlink:href="#icon-touzi6"></use>
+			</svg>
+		</div>
+		<div class="rule rule2" value="5">五骰玩法</div>
+	</div>
+</div>
+<div class="clcu closed">
+	<div class="des">请选择你的点数</div>
+	<div class="choose-menu">
+		<div class="number-box closed">
+			<input type="text" placeholder="请输入个数">
+		</div>
+		<div class="choose-box choose-box1">
+			<div class="self-box">
+				<svg class="icon icon-touzi1" aria-hidden="true">
+					<use xlink:href="#icon-touzi1"></use>
+				</svg>
+				<input type="checkbox" value="1">
+			</div>
+			<div class="self-box">
+				<svg class="icon icon-touzi2" aria-hidden="true">
+					<use xlink:href="#icon-touzi2"></use>
+				</svg>
+				<input type="checkbox" value="2">
+			</div>
+			<div class="self-box">
+				<svg class="icon icon-touzi3" aria-hidden="true">
+					<use xlink:href="#icon-touzi3"></use>
+				</svg>
+				<input type="checkbox" value="3">
+			</div>
+			<div class="self-box">
+				<svg class="icon icon-touzi4" aria-hidden="true">
+					<use xlink:href="#icon-touzi4"></use>
+				</svg>
+				<input type="checkbox" value="4">
+			</div>
+			<div class="self-box">
+				<svg class="icon icon-touzi5" aria-hidden="true">
+					<use xlink:href="#icon-touzi5"></use>
+				</svg>
+				<input type="checkbox" value="5">
+			</div>
+			<div class="self-box">
+				<svg class="icon icon-touzi6" aria-hidden="true">
+					<use xlink:href="#icon-touzi6"></use>
+				</svg>
+				<input type="checkbox" value="6">
+			</div>
+		</div>
+		<div class="choose-box choose-box2">
+			<div class="self-box">
+				<svg class="icon icon-touzi1" aria-hidden="true">
+					<use xlink:href="#icon-touzi1"></use>
+				</svg>
+				<input type="checkbox" value="1">
+			</div>
+			<div class="self-box">
+				<svg class="icon icon-touzi2" aria-hidden="true">
+					<use xlink:href="#icon-touzi2"></use>
+				</svg>
+				<input type="checkbox" value="2">
+			</div>
+			<div class="self-box">
+				<svg class="icon icon-touzi3" aria-hidden="true">
+					<use xlink:href="#icon-touzi3"></use>
+				</svg>
+				<input type="checkbox" value="3">
+			</div>
+			<div class="self-box">
+				<svg class="icon icon-touzi4" aria-hidden="true">
+					<use xlink:href="#icon-touzi4"></use>
+				</svg>
+				<input type="checkbox" value="4">
+			</div>
+			<div class="self-box">
+				<svg class="icon icon-touzi5" aria-hidden="true">
+					<use xlink:href="#icon-touzi5"></use>
+				</svg>
+				<input type="checkbox" value="5">
+			</div>
+			<div class="self-box">
+				<svg class="icon icon-touzi6" aria-hidden="true">
+					<use xlink:href="#icon-touzi6"></use>
+				</svg>
+				<input type="checkbox" value="6">
+			</div>
+		</div>
+		<div class="choose-box choose-box3">
+			<div class="self-box">
+				<svg class="icon icon-touzi1" aria-hidden="true">
+					<use xlink:href="#icon-touzi1"></use>
+				</svg>
+				<input type="checkbox" value="1">
+			</div>
+			<div class="self-box">
+				<svg class="icon icon-touzi2" aria-hidden="true">
+					<use xlink:href="#icon-touzi2"></use>
+				</svg>
+				<input type="checkbox" value="2">
+			</div>
+			<div class="self-box">
+				<svg class="icon icon-touzi3" aria-hidden="true">
+					<use xlink:href="#icon-touzi3"></use>
+				</svg>
+				<input type="checkbox" value="3">
+			</div>
+			<div class="self-box">
+				<svg class="icon icon-touzi4" aria-hidden="true">
+					<use xlink:href="#icon-touzi4"></use>
+				</svg>
+				<input type="checkbox" value="4">
+			</div>
+			<div class="self-box">
+				<svg class="icon icon-touzi5" aria-hidden="true">
+					<use xlink:href="#icon-touzi5"></use>
+				</svg>
+				<input type="checkbox" value="5">
+			</div>
+			<div class="self-box">
+				<svg class="icon icon-touzi6" aria-hidden="true">
+					<use xlink:href="#icon-touzi6"></use>
+				</svg>
+				<input type="checkbox" value="6">
+			</div>
+		</div>
+		<div class="choose-box choose-box4 closed">
+			<div class="self-box">
+				<svg class="icon icon-touzi1" aria-hidden="true">
+					<use xlink:href="#icon-touzi1"></use>
+				</svg>
+				<input type="checkbox" value="1">
+			</div>
+			<div class="self-box">
+				<svg class="icon icon-touzi2" aria-hidden="true">
+					<use xlink:href="#icon-touzi2"></use>
+				</svg>
+				<input type="checkbox" value="2">
+			</div>
+			<div class="self-box">
+				<svg class="icon icon-touzi3" aria-hidden="true">
+					<use xlink:href="#icon-touzi3"></use>
+				</svg>
+				<input type="checkbox" value="3">
+			</div>
+			<div class="self-box">
+				<svg class="icon icon-touzi4" aria-hidden="true">
+					<use xlink:href="#icon-touzi4"></use>
+				</svg>
+				<input type="checkbox" value="4">
+			</div>
+			<div class="self-box">
+				<svg class="icon icon-touzi5" aria-hidden="true">
+					<use xlink:href="#icon-touzi5"></use>
+				</svg>
+				<input type="checkbox" value="5">
+			</div>
+			<div class="self-box">
+				<svg class="icon icon-touzi6" aria-hidden="true">
+					<use xlink:href="#icon-touzi6"></use>
+				</svg>
+				<input type="checkbox" value="6">
+			</div>
+		</div>
+		<div class="choose-box choose-box5 closed">
+			<div class="self-box">
+				<svg class="icon icon-touzi1" aria-hidden="true">
+					<use xlink:href="#icon-touzi1"></use>
+				</svg>
+				<input type="checkbox" value="1">
+			</div>
+			<div class="self-box">
+				<svg class="icon icon-touzi2" aria-hidden="true">
+					<use xlink:href="#icon-touzi2"></use>
+				</svg>
+				<input type="checkbox" value="2">
+			</div>
+			<div class="self-box">
+				<svg class="icon icon-touzi3" aria-hidden="true">
+					<use xlink:href="#icon-touzi3"></use>
+				</svg>
+				<input type="checkbox" value="3">
+			</div>
+			<div class="self-box">
+				<svg class="icon icon-touzi4" aria-hidden="true">
+					<use xlink:href="#icon-touzi4"></use>
+				</svg>
+				<input type="checkbox" value="4">
+			</div>
+			<div class="self-box">
+				<svg class="icon icon-touzi5" aria-hidden="true">
+					<use xlink:href="#icon-touzi5"></use>
+				</svg>
+				<input type="checkbox" value="5">
+			</div>
+			<div class="self-box">
+				<svg class="icon icon-touzi6" aria-hidden="true">
+					<use xlink:href="#icon-touzi6"></use>
+				</svg>
+				<input type="checkbox" value="6">
+			</div>
+		</div>
+	</div>
+	<div class="result-menu closed"></div>
+	<div class="submit">确认</div>
+	<div class="exit">关闭</div>
+</div>
+</body>
+</html>
